@@ -23,7 +23,11 @@
 					</div><!-- .site-branding -->
 
 					<nav id="site-navigation" class="main-navigation" role="navigation">
-						wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) )
+						<div class="menu-menu-1-container"><ul id="primary-menu" class="menu"><li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-41"><a href="#about">About</a></li>
+							<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#portfolio">Portfolio</a></li>
+							<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#tools">Tools</a></li>
+							<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a href="#contact">Contact</a></li>
+						</ul></div>
 					</nav><!-- #site-navigation -->
 				</div> <!-- /.nav-logo-container -->
 			</div> <!-- /.outerwrapper -->
@@ -38,7 +42,7 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="inner-wrapper">
 				<div class="site-info">
-					<p>&copy; robinhamill.ca<span class="sep"> | </span>All rights reserved php echo date("Y")</p>
+					<p>&copy; robinhamill.ca<span class="sep"> | </span>All rights reserved <%= Time.now.year %></p>
 				</div><!-- .site-info -->
 			</div> <!-- /.inner-wrapper -->
 		</footer><!-- #colophon -->
