@@ -1,3 +1,4 @@
+
 	<section class="home-container" data-stellar-background-ratio="1.5">
 		<div class="inner-wrapper">
 			<div class="tagline">
@@ -31,28 +32,30 @@
 					</div> <!-- /.headshot-text-container -->
 					<a href="http://robinhamill.ca/robinHamill_cv.pdf" class="cv button">View CV</a>
 				</div> <!-- /.about-content -->
-			
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.about-container -->
 
 
 <!-- PORTFOLIO SECTION -->
 	<section class="portfolio-container" id="portfolio">
-				<div class="inner-wrapper">
-					<h3>Portfolio</h3>
-					<div class="little-line light"></div>
-					<div class="work-items">
-								<div class="portfolio-item">
-									<div class="portfolio-image">
-										<!-- <img src="the_field('portfolio_image')" alt="Portfolio Sample Image"> -->
-									</div> <!-- /.portfolio-image -->
-									<div class="portfolio-text">
-										<h4>the_title()</h4>
-										<a href="the_field('live_link')" class="viewLive button" target="_blank">View Live</a>
-									</div> <!-- /.portfolio-text -->
-								</div> <!-- /.portfolio-item -->
-					</div> <!-- /.work-items -->
-				</div> <!-- /.inner-wrapper -->
+		<div class="inner-wrapper">
+			<h3>Portfolio</h3>
+			<div class="little-line light"></div>
+			<div class="work-items">
+			<% @projects.each do |project| %>
+				<div class="portfolio-item">
+					<div class="portfolio-image">
+						<%= image_tag project.screenshot %>
+					</div> <!-- /.portfolio-image -->
+					<div class="portfolio-text">
+						<h4><%= project.title %></h4>
+						<p><%= project.description %></p>
+						<%= link_to "View Live", project.url, class: "viewLive button" %>
+					</div> <!-- /.portfolio-text -->
+				</div> <!-- /.portfolio-item -->
+			<% end %>
+			</div> <!-- /.work-items -->
+		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.portfolio-container -->
 
 

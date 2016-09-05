@@ -28,11 +28,23 @@ before_action :authenticate_user!
 	end
 
 	def update
-		
+		respond_to do |format|
+      if @project.update(book_params)
+        format.html { redirect_to book_path, notice: 'Project was successfully updated.' }
+        format.json { render :show, status: :ok, location: @project }
+      else
+        format.html { render :edit }
+        format.json { render json: @project.errors, status: :unprocessable_entity }
+      end
+    end
 	end
 
 	def destroy
-		
+		@project.destroy
+		respond_to do |format|
+	    format.html { redirect_to projects_path, notice: 'Project was successfully destroyed.' }
+	    format.json { head :no_content }
+	  end
 	end
 
 private
