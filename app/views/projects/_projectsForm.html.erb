@@ -16,6 +16,10 @@
 		<%= f.file_field :screenshot %>
 	</div>
 	<div class="field">
+		<%= f.label :active, "Show on homepage?" %>:
+		<%= f.check_box :active %>
+	</div>
+	<div class="field">
 		<%= f.submit class: 'button button--medium' %>
 	</div>
 <% end %>

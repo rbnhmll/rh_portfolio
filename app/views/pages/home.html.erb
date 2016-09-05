@@ -43,6 +43,7 @@
 			<div class="little-line light"></div>
 			<div class="work-items">
 			<% @projects.each do |project| %>
+				<% if project.active? %>
 				<div class="portfolio-item">
 					<div class="portfolio-image">
 						<%= image_tag project.screenshot %>
@@ -53,6 +54,7 @@
 						<%= link_to "View Live", project.url, class: "viewLive button" %>
 					</div> <!-- /.portfolio-text -->
 				</div> <!-- /.portfolio-item -->
+				<% end %>
 			<% end %>
 			</div> <!-- /.work-items -->
 		</div> <!-- /.inner-wrapper -->

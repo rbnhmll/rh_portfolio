@@ -29,8 +29,8 @@ before_action :authenticate_user!
 
 	def update
 		respond_to do |format|
-      if @project.update(book_params)
-        format.html { redirect_to book_path, notice: 'Project was successfully updated.' }
+      if @project.update(project_params)
+        format.html { redirect_to projects_path, notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
@@ -54,7 +54,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :screenshot, :url)
+    params.require(:project).permit(:title, :description, :screenshot, :url, :active)
   end
 
 end
