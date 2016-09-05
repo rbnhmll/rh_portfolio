@@ -3,7 +3,7 @@ before_action :set_project, only: [:edit, :update, :destroy]
 before_action :authenticate_user!
 
 	def index
-		@projects = Project.all
+		@projects = Project.all.order(created_at: :desc)
 	end
 
 	def show
@@ -54,7 +54,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :screenshot, :url, :active)
+    params.require(:project).permit(:title, :description, :screenshot, :url, :active, :lang_1, :lang_2, :lang_3, :lang_4, :lang_5)
   end
 
 end

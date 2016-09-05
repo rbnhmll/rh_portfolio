@@ -50,6 +50,23 @@
 					</div> <!-- /.portfolio-image -->
 					<div class="portfolio-text">
 						<h4><%= project.title %></h4>
+
+						<% if project.lang_1 != "" %>
+							<div class="tech"><%= project.lang_1 %></div>
+						<% end %>
+						<% if project.lang_2 != "" %>
+							<div class="tech"><%= project.lang_2 %></div>
+						<% end %>
+						<% if project.lang_3 != "" %>
+							<div class="tech"><%= project.lang_3 %></div>
+						<% end %>
+						<% if project.lang_4 != "" %>
+							<div class="tech"><%= project.lang_4 %></div>
+						<% end %>
+						<% if project.lang_5 != "" %>
+							<div class="tech"><%= project.lang_5 %></div>
+						<% end %>
+
 						<p><%= project.description %></p>
 						<%= link_to "View Live", project.url, class: "viewLive button" %>
 					</div> <!-- /.portfolio-text -->
