@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RobinHamill</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body class="home page page-template-default"  id="home top">
+	<div id="page" class="hfeed site">
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="outer-wrapper">
+				<div class="nav-logo-container">
+					<div class="site-branding">
+						<h1 class="site-title">
+							<a href="#top" rel="home">php bloginfo( 'name' )</a>
+							<div class="mini-box mini-topleft animated fadeInLeftBig"></div>
+							<div class="mini-box mini-topright animated fadeInLeftBig"></div>
+							<div class="mini-box mini-bottomleft animated fadeInLeftBig"></div>
+							<div class="mini-box mini-bottomright animated fadeInLeftBig"></div>
+						</h1>
+					</div><!-- .site-branding -->
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) )
+					</nav><!-- #site-navigation -->
+				</div> <!-- /.nav-logo-container -->
+			</div> <!-- /.outerwrapper -->
+
+		</header><!-- #masthead -->
+		<div id="content" class="site-content">
+
+			<%= yield %>
+
+		</div> <!-- /.site-container -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="inner-wrapper">
+				<div class="site-info">
+					<p>&copy; robinhamill.ca<span class="sep"> | </span>All rights reserved php echo date("Y")</p>
+				</div><!-- .site-info -->
+			</div> <!-- /.inner-wrapper -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+</body>
+</html>

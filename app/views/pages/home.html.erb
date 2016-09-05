@@ -1,0 +1,108 @@
+	<section class="home-container" data-stellar-background-ratio="1.5">
+		<div class="inner-wrapper">
+			<div class="tagline">
+				<div class="wide-line animated fadeInLeftBig"></div>
+				<h2 class="dev-name animated fadeIn">bloginfo( 'name' )</h2>
+				<h3 class="site-description animated fadeIn">bloginfo( 'description' )</h3>
+				<div class="wide-line animated fadeInRightBig"></div>
+			</div> <!-- /.tagline -->
+		</div> <!-- /.inner-wrapper -->
+	</section> <!-- /.home-container -->
+
+
+<!-- ABOUT SECTION -->
+	<section class="about-container" id="about">
+		<div class="inner-wrapper">
+				<h3>the_field('about_section_title')</h3>
+				<div class="little-line dark"></div>
+				
+				<div class="about-content">
+					<div class="headshot-text-container">
+						<div class="headshot">
+							<img src="the_field('photo')" alt="">
+						</div> <!-- /.headshot -->
+						<div class="about-text">the_field('about_description')
+						</div> <!-- /.about-text -->
+					</div> <!-- /.headshot-text-container -->
+					<a href="http://robinhamill.ca/robinHamill_cv.pdf" class="cv button">View CV</a>
+				</div> <!-- /.about-content -->
+			
+		</div> <!-- /.inner-wrapper -->
+	</section> <!-- /.about-container -->
+
+
+<!-- PORTFOLIO SECTION -->
+	<section class="portfolio-container" id="portfolio">
+				<div class="inner-wrapper">
+					<h3>the_field('portfolio_section_title')</h3>
+					<div class="little-line light"></div>
+					<div class="work-items">
+								<div class="portfolio-item">
+									<div class="portfolio-image">
+										<img src="the_field('portfolio_image')" alt="Portfolio Sample Image">
+									</div> <!-- /.portfolio-image -->
+									<div class="portfolio-text">
+										<h4>the_title()</h4>
+										<a href="the_field('live_link')" class="viewLive button" target="_blank">View Live</a>
+									</div> <!-- /.portfolio-text -->
+								</div> <!-- /.portfolio-item -->
+					</div> <!-- /.work-items -->
+				</div> <!-- /.inner-wrapper -->
+	</section> <!-- /.portfolio-container -->
+
+
+<!-- TOOLS SECTION -->
+	<section class="blog-container" id="tools">
+		<div class="inner-wrapper">
+				<h3>the_field('blog_section_title')</h3>
+				<div class="little-line dark"></div>
+				<p>the_field('blog_description')</p>
+			<div class="skill-icons">
+				<span class="devicons devicons-html5" title="HTML5"></span>
+				<span class="devicons devicons-css3" title="CSS3"></span>
+				<span class="devicons devicons-sass" title="SASS"></span>
+				<span class="devicons devicons-javascript_badge" title="Javascript"></span>
+				<span class="devicons devicons-jquery" title="jQuery"></span>
+				<span class="devicons devicons-gulp" title="Gulp"></span>
+				<span class="devicons devicons-ruby" title="Ruby"></span>
+				<span class="devicons devicons-ruby_on_rails" title="Ruby on Rails"></span>
+				<span class="devicons devicons-git" title="Git"></span>
+			</div> <!-- /.skill-icons -->
+		</div> <!-- /.inner-wrapper -->
+	</section> <!-- /.blog-container -->
+
+
+<!-- CONTACT SECTION -->
+	<section class="contact-container" id="contact" data-stellar-background-ratio="0.5">
+			<div class="inner-wrapper">
+				<h3>the_field('contact_section_title')</h3>
+				<div class="little-line light"></div>
+				<p>the_field('contact_description')</p>
+				<div class="info-form-container">
+					<div class="information">
+						<h4>Let's work together!</h4>
+						<div class="contact-box">
+							<a href="http://twitter.com/rbnhmll" class="social-button"><i class="fa fa-twitter"></i></a>
+							<a href="https://ca.linkedin.com/in/robin-hamill-86b19559" class="social-button"><i class="fa fa-linkedin"></i></a>
+							<a href="http://github.com/rbnhmll" class="social-button"><i class="fa fa-github"></i></a>
+							<a href="http://codepen.io/rbnhmll" class="social-button"><i class="fa fa-codepen"></i></a>
+						</div> <!-- /.contact-box -->
+						<a href="mailto:hi@robinhamill.ca" class="button email-btn">hi@robinhamill.ca</a>
+					</div> <!-- /.information -->
+					
+					<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
+						<div class="name-email-container">
+							<input type="text" class="name-input" name="name" placeholder="Name">
+							<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
+						</div> <!-- /.name-email-container -->
+						<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+						<input type="text" name="_gotcha" style="display:none" />
+						<div class="submit-container">
+							<input type="submit" value="Send Message" class="submit-button">
+						</div> <!-- /.submit-container -->
+					</form> <!-- /.contact-form -->
+				</div> <!-- /.info-form-container -->
+
+			</div> <!-- /.inner-wrapper -->
+		<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+	</section> <!-- /.contact-container
