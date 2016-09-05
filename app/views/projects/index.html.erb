@@ -1,0 +1,8 @@
+<% @projects.each do |project| %>
+<div class="project">
+	<p><%= project.title %></p>
+	<p><%= project.description %></p>
+	<p><%= project.url %></p>
+	<%= image_tag(project.screenshot) %>
+</div>
+<% end %>
