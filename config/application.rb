@@ -29,7 +29,7 @@ module RobinHamill
       s3_credentials: {
         access_key_id: ENV['AWS_KEY'],
         secret_access_key: ENV['AWS_SECRET'],
-        bucket: "rh_portfoio-images"
+        bucket: "rhportfoio-images"
       }
     }
   end
