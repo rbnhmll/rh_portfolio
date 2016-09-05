@@ -34,6 +34,9 @@
 							<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#portfolio">Portfolio</a></li>
 							<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#tools">Tools</a></li>
 							<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a href="#contact">Contact</a></li>
+							<% if user_signed_in? %>
+								<li class="menu-item button--sign_out"><%= link_to "Sign Out", "/users/sign_out", method: 'delete' %></li>
+							<% end %>
 						</ul></div>
 					</nav><!-- #site-navigation -->
 				</div> <!-- /.nav-logo-container -->
