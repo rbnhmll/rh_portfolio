@@ -38,7 +38,7 @@ before_action :authenticate_user!
 private
 
   def set_project
-    @group = Group.find(params[:id])
+    @project = Project.find(params[:id])
   end
   
   def project_params

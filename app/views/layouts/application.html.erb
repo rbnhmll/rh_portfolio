@@ -36,6 +36,7 @@
 							<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><%= link_to "Tools", root_path(:anchor => "tools") %></li>
 							<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><%= link_to "Contact", root_path(:anchor => "contact") %></li>
 							<% if user_signed_in? %>
+								<li class="menu-item"><%= link_to "Projects", projects_path %></li>
 								<li class="menu-item"><%= link_to "Add Project", new_project_path %></li>
 								<li class="menu-item button--sign_out"><%= link_to "Sign Out", "/users/sign_out", method: 'delete' %></li>
 							<% end %>

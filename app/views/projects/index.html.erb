@@ -2,7 +2,10 @@
 <div class="project">
 	<p><%= project.title %></p>
 	<p><%= project.description %></p>
-	<p><%= project.url %></p>
+	<%= link_to("See it live", project.url) %>
 	<%= image_tag(project.screenshot) %>
+	<%= link_to %>
+
+	<%= link_to "Edit Project", edit_project_path(project) %>
 </div>
 <% end %>
