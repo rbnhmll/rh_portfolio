@@ -1,18 +1,18 @@
 <%= form_for @project do |f| %>
 	<div class="field">
-		<%= f.label :title %>
+		<%= f.label :title %>:
 		<%= f.text_field :title %>
 	</div>
 	<div class="field">
-		<%= f.label :description %>
-		<%= f.text_field :description %>
+		<%= f.label :description %>:
+		<%= f.text_area :description %>
 	</div>
 	<div class="field">
-		<%= f.label :url %>
-		<%= f.text_area :url %>
+		<%= f.label :url %>:
+		<%= f.text_field :url %>
 	</div>
 	<div class="field">
-		<%= f.label :screenshot %>
+		<%= f.label :screenshot %>:
 		<%= f.file_field :screenshot %>
 	</div>
 	<div class="field">
