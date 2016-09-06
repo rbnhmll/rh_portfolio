@@ -3,7 +3,7 @@
 $('a').smoothScroll();
 
 $(function(){
-    // this will get the full URL at the address bar
+//     // this will get the full URL at the address bar
     var url = window.location.href; 
 
     // passes on every "a" tag 

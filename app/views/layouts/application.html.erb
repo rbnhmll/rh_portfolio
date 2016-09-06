@@ -35,11 +35,14 @@
 							<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><%= link_to "Portfolio", root_path(:anchor => "portfolio") %></li>
 							<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><%= link_to "Tools", root_path(:anchor => "tools") %></li>
 							<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><%= link_to "Contact", root_path(:anchor => "contact") %></li>
+							
+							<!-- Back-end only links -->
 							<% if user_signed_in? %>
 								<li class="menu-item"><%= link_to "*Project index", projects_path %></li>
 								<li class="menu-item"><%= link_to "*Add Project", new_project_path %></li>
 								<li class="menu-item button--sign_out"><%= link_to "Sign Out", "/users/sign_out", method: 'delete' %></li>
 							<% end %>
+
 						</ul></div>
 					</nav><!-- #site-navigation -->
 				</div> <!-- /.nav-logo-container -->
