@@ -34,7 +34,7 @@
 						<div class="tech"><%= project.lang_5 %></div>
 					<% end %>
 
-					<p><%= project.description %></p>
+					<p><%= project.description.html_safe %></p>
 
 					<!-- Page Specific buttons -->
 					<% if current_page?(projects_path) %>
