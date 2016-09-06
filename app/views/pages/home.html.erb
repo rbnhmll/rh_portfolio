@@ -1,154 +1,153 @@
-
-	<section class="home-container" data-stellar-background-ratio="1.5">
-		<div class="inner-wrapper">
-			<div class="tagline">
-				<div class="wide-line animated fadeInLeftBig"></div>
-				<h2 class="dev-name animated fadeIn">Robin Hamill</h2>
-				<h3 class="site-description animated fadeIn">Front End Developer</h3>
-				<div class="wide-line animated fadeInRightBig"></div>
-			</div> <!-- /.tagline -->
-		</div> <!-- /.inner-wrapper -->
-	</section> <!-- /.home-container -->
+<section class="home-container" data-stellar-background-ratio="1.5">
+	<div class="inner-wrapper">
+		<div class="tagline">
+			<div class="wide-line animated fadeInLeftBig"></div>
+			<h2 class="dev-name animated fadeIn">Robin Hamill</h2>
+			<h3 class="site-description animated fadeIn">Front End Developer</h3>
+			<div class="wide-line animated fadeInRightBig"></div>
+		</div> <!-- /.tagline -->
+	</div> <!-- /.inner-wrapper -->
+</section> <!-- /.home-container -->
 
 
 <!-- ABOUT SECTION -->
-	<section class="about-container" id="about">
-		<div class="inner-wrapper">
-				<h3>About</h3>
-				<div class="little-line dark"></div>
-				
-				<div class="about-content">
-					<div class="headshot-text-container">
-						<div class="headshot">
-							<%= image_tag('robinHeadshotSquare.jpg') %>
-						</div> <!-- /.headshot -->
-						<div class="about-text">
-							<p>Hey! I&rsquo;m Robin, a Front-end Developer from Toronto. I love to build fun and functional stuff with code. I&rsquo;m a Bootcamp Grad from HackerYou, and a Ladies Learning Code mentor. I&rsquo;m currently working as a consultant at Rogers, specializing in digital optimization, and A/B testing.</p>
+<section class="about-container" id="about">
+	<div class="inner-wrapper">
+			<h3>About</h3>
+			<div class="little-line dark"></div>
+			
+			<div class="about-content">
+				<div class="headshot-text-container">
+					<div class="headshot">
+						<%= image_tag('robinHeadshotSquare.jpg') %>
+					</div> <!-- /.headshot -->
+					<div class="about-text">
+						<p>Hey! I&rsquo;m Robin, a <strong>Front-end Developer</strong> from Toronto. I love to build fun and functional stuff with code. I&rsquo;m a Bootcamp Grad from HackerYou, and a Ladies Learning Code mentor. I&rsquo;m currently working as a consultant at Rogers, specializing in digital optimization, and A/B testing.</p>
 
-							<p>Most recently I picked up Ruby on Rails, and am having lots of fun building web apps, such as bookbuddi.es, and have a couple more projects in the works.</p>
+						<p>Most recently I picked up <strong>Ruby on Rails</strong>, and am having lots of fun building web apps, such as <%= link_to("bookbuddi.es", "http://www.bookbuddi.es") %>, and have a couple more projects in the works.</p>
 
-							<p>When I&rsquo;m not coding, I enjoy rock climbing, cycling, travel and photography. Maybe we should work together!</p>
-						</div> <!-- /.about-text -->
-					</div> <!-- /.headshot-text-container -->
-					<a href="http://robinhamill.ca/robinHamill_cv.pdf" class="cv button">View CV</a>
-				</div> <!-- /.about-content -->
-		</div> <!-- /.inner-wrapper -->
-	</section> <!-- /.about-container -->
+						<p>When I&rsquo;m not coding, I enjoy rock climbing, cycling, travel and photography. Maybe we should work together!</p>
+					</div> <!-- /.about-text -->
+				</div> <!-- /.headshot-text-container -->
+				<%= link_to("View CV", "http://robinhamill.ca/robinHamill_cv.pdf" , class: "cv button") %>
+			</div> <!-- /.about-content -->
+	</div> <!-- /.inner-wrapper -->
+</section> <!-- /.about-container -->
 
 
 <!-- PORTFOLIO SECTION -->
-	<section class="portfolio-container" id="portfolio">
-		<div class="inner-wrapper">
-			<h3>Portfolio</h3>
-			<div class="little-line light"></div>
-			<div class="work-items">
-			<% @projects.each do |project| %>
-				<% if project.active? %>
-				<div class="portfolio-item">
-					<div class="portfolio-image">
-						<%= image_tag project.screenshot %>
-					</div> <!-- /.portfolio-image -->
-					<div class="portfolio-text">
-						<h4><%= project.title %></h4>
+<section class="portfolio-container" id="portfolio">
+	<div class="inner-wrapper">
+		<h3>Portfolio</h3>
+		<div class="little-line light"></div>
+		<div class="work-items">
+		<% @projects.each do |project| %>
+			<% if project.active? %>
+			<div class="portfolio-item">
+				<div class="portfolio-image">
+					<%= image_tag project.screenshot %>
+				</div> <!-- /.portfolio-image -->
+				<div class="portfolio-text">
+					<h4><%= project.title %></h4>
 
-						<% if project.lang_1 != "" %>
-							<div class="tech"><%= project.lang_1 %></div>
-						<% end %>
-						<% if project.lang_2 != "" %>
-							<div class="tech"><%= project.lang_2 %></div>
-						<% end %>
-						<% if project.lang_3 != "" %>
-							<div class="tech"><%= project.lang_3 %></div>
-						<% end %>
-						<% if project.lang_4 != "" %>
-							<div class="tech"><%= project.lang_4 %></div>
-						<% end %>
-						<% if project.lang_5 != "" %>
-							<div class="tech"><%= project.lang_5 %></div>
-						<% end %>
+					<% if project.lang_1 != "" %>
+						<div class="tech"><%= project.lang_1 %></div>
+					<% end %>
+					<% if project.lang_2 != "" %>
+						<div class="tech"><%= project.lang_2 %></div>
+					<% end %>
+					<% if project.lang_3 != "" %>
+						<div class="tech"><%= project.lang_3 %></div>
+					<% end %>
+					<% if project.lang_4 != "" %>
+						<div class="tech"><%= project.lang_4 %></div>
+					<% end %>
+					<% if project.lang_5 != "" %>
+						<div class="tech"><%= project.lang_5 %></div>
+					<% end %>
 
-						<p><%= project.description %></p>
-						<%= link_to "View Live", project.url, class: "viewLive button" %>
-					</div> <!-- /.portfolio-text -->
-				</div> <!-- /.portfolio-item -->
-				<% end %>
+					<p><%= project.description %></p>
+					<%= link_to "View Live", project.url, class: "viewLive button" %>
+				</div> <!-- /.portfolio-text -->
+			</div> <!-- /.portfolio-item -->
 			<% end %>
-			</div> <!-- /.work-items -->
-		</div> <!-- /.inner-wrapper -->
-	</section> <!-- /.portfolio-container -->
+		<% end %>
+		</div> <!-- /.work-items -->
+	</div> <!-- /.inner-wrapper -->
+</section> <!-- /.portfolio-container -->
 
 
 <!-- TOOLS SECTION -->
-	<section class="blog-container" id="tools">
-		<div class="inner-wrapper">
-			<h3>Tools</h3>
-			<div class="little-line dark"></div>
-			<p>I utilize an array of technical skills in my work, including: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>SASS</strong>, <strong>Responsive Design</strong>, <strong>JavaScript</strong>, <strong>JQuery</strong>, <strong>Ruby/Ruby on Rails</strong>, and tools such as <strong>Command Line</strong>, <strong>Gulp</strong>, <strong>Git</strong>, and <strong>Photoshop</strong>. I’m happiest when I’m learning new tools and skills.</p>
-			
-			<div class="skill-icons">
-				<span class="devicons devicons-html5" title="HTML5">
-					<i class="devicon-html5-plain-wordmark colored"></i>
-				</span>
-				<span class="devicons devicons-css3" title="CSS3">
-					<i class="devicon-css3-plain-wordmark colored"></i>
-				</span>
-				<span class="devicons devicons-sass" title="SASS">
-					<i class="devicon-sass-original colored"></i>
-				</span>
-				<span class="devicons devicons-javascript_badge" title="Javascript">
-					<i class="devicon-javascript-plain colored"></i>
-				</span>
-				<span class="devicons devicons-jquery" title="jQuery">
-					<i class="devicon-jquery-plain-wordmark colored"></i>
-				</span>
-				<span class="devicons devicons-gulp" title="Gulp">
-					<i class="devicon-gulp-plain colored"></i>
-				</span>
-				<span class="devicons devicons-ruby" title="Ruby">
-					<i class="devicon-ruby-plain-wordmark colored"></i>
-				</span>
-				<span class="devicons devicons-ruby_on_rails" title="Ruby on Rails">
-					<i class="devicon-rails-plain-wordmark colored"></i>
-				</span>
-				<span class="devicons devicons-git" title="Git">
-					<i class="devicon-git-plain colored"></i>
-				</span>
-			</div> <!-- /.skill-icons -->
-		</div> <!-- /.inner-wrapper -->
-	</section> <!-- /.blog-container -->
+<section class="blog-container" id="tools">
+	<div class="inner-wrapper">
+		<h3>Tools</h3>
+		<div class="little-line dark"></div>
+		<p>I utilize an array of technical skills in my work, including: <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>SASS</strong>, <strong>Responsive Design</strong>, <strong>JavaScript</strong>, <strong>JQuery</strong>, <strong>Ruby/Ruby on Rails</strong>, and tools such as <strong>Command Line</strong>, <strong>Gulp</strong>, <strong>Git</strong>, and <strong>Photoshop</strong>. I’m happiest when I’m learning new tools and skills.</p>
+		
+		<div class="skill-icons">
+			<span class="devicons devicons-html5" title="HTML5">
+				<i class="devicon-html5-plain-wordmark colored"></i>
+			</span>
+			<span class="devicons devicons-css3" title="CSS3">
+				<i class="devicon-css3-plain-wordmark colored"></i>
+			</span>
+			<span class="devicons devicons-sass" title="SASS">
+				<i class="devicon-sass-original colored"></i>
+			</span>
+			<span class="devicons devicons-javascript_badge" title="Javascript">
+				<i class="devicon-javascript-plain colored"></i>
+			</span>
+			<span class="devicons devicons-jquery" title="jQuery">
+				<i class="devicon-jquery-plain-wordmark colored"></i>
+			</span>
+			<span class="devicons devicons-gulp" title="Gulp">
+				<i class="devicon-gulp-plain colored"></i>
+			</span>
+			<span class="devicons devicons-ruby" title="Ruby">
+				<i class="devicon-ruby-plain-wordmark colored"></i>
+			</span>
+			<span class="devicons devicons-ruby_on_rails" title="Ruby on Rails">
+				<i class="devicon-rails-plain-wordmark colored"></i>
+			</span>
+			<span class="devicons devicons-git" title="Git">
+				<i class="devicon-git-plain colored"></i>
+			</span>
+		</div> <!-- /.skill-icons -->
+	</div> <!-- /.inner-wrapper -->
+</section> <!-- /.blog-container -->
 
 
 <!-- CONTACT SECTION -->
-	<section class="contact-container" id="contact" data-stellar-background-ratio="0.5">
-			<div class="inner-wrapper">
-				<h3>Contact</h3>
-				<div class="little-line light"></div>
-				<p>Get in touch if you would like to work together, brain-storm, or just talk shop. I like coffee.</p>
-				<div class="info-form-container">
-					<div class="information">
-						<h4>Let's work together!</h4>
-						<div class="contact-box">
-							<a href="http://twitter.com/rbnhmll" class="social-button"><i class="fa fa-twitter"></i></a>
-							<a href="https://ca.linkedin.com/in/robin-hamill-86b19559" class="social-button"><i class="fa fa-linkedin"></i></a>
-							<a href="http://github.com/rbnhmll" class="social-button"><i class="fa fa-github"></i></a>
-							<a href="http://codepen.io/rbnhmll" class="social-button"><i class="fa fa-codepen"></i></a>
-						</div> <!-- /.contact-box -->
-						<a href="mailto:hi@robinhamill.ca" class="button email-btn">hi@robinhamill.ca</a>
-					</div> <!-- /.information -->
-					
-					<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
-						<div class="name-email-container">
-							<input type="text" class="name-input" name="name" placeholder="Name">
-							<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
-						</div> <!-- /.name-email-container -->
-						<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
-						<input type="text" name="_gotcha" style="display:none" />
-						<div class="submit-container">
-							<input type="submit" value="Send Message" class="submit-button">
-						</div> <!-- /.submit-container -->
-					</form> <!-- /.contact-form -->
-				</div> <!-- /.info-form-container -->
+<section class="contact-container" id="contact" data-stellar-background-ratio="0.5">
+		<div class="inner-wrapper">
+			<h3>Contact</h3>
+			<div class="little-line light"></div>
+			<p>Get in touch if you would like to work together, brain-storm, or just talk shop. I like coffee.</p>
+			<div class="info-form-container">
+				<div class="information">
+					<h4>Let's work together!</h4>
+					<div class="contact-box">
+						<a href="http://twitter.com/rbnhmll" class="social-button"><i class="fa fa-twitter"></i></a>
+						<a href="https://ca.linkedin.com/in/robin-hamill-86b19559" class="social-button"><i class="fa fa-linkedin"></i></a>
+						<a href="http://github.com/rbnhmll" class="social-button"><i class="fa fa-github"></i></a>
+						<a href="http://codepen.io/rbnhmll" class="social-button"><i class="fa fa-codepen"></i></a>
+					</div> <!-- /.contact-box -->
+					<a href="mailto:hi@robinhamill.ca" class="button email-btn">hi@robinhamill.ca</a>
+				</div> <!-- /.information -->
+				
+				<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
+					<div class="name-email-container">
+						<input type="text" class="name-input" name="name" placeholder="Name">
+						<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
+					</div> <!-- /.name-email-container -->
+					<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+					<input type="text" name="_gotcha" style="display:none" />
+					<div class="submit-container">
+						<input type="submit" value="Send Message" class="submit-button">
+					</div> <!-- /.submit-container -->
+				</form> <!-- /.contact-form -->
+			</div> <!-- /.info-form-container -->
 
-			</div> <!-- /.inner-wrapper -->
-		<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-	</section> <!-- /.contact-container
+		</div> <!-- /.inner-wrapper -->
+	<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+</section> <!-- /.contact-container
