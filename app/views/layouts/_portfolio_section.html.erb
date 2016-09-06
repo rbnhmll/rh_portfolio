@@ -1,4 +1,4 @@
-<!-- PORTFOLIO SECTION -->
+PORTFOLIO SECTION -->
 <section class="portfolio-container" id="portfolio">
 	<div class="inner-wrapper">
 		<h3>Portfolio</h3>
@@ -30,6 +30,8 @@
 					<% end %>
 
 					<p><%= project.description %></p>
+
+					<!-- Page Specific buttons -->
 					<% if current_page?(projects_path) %>
 						<p>Active on homepage?: <strong><%= project.active %></strong></p>
 					<%= link_to "Edit", edit_project_path(project), class: "button submit-button" %>
@@ -37,10 +39,11 @@
 					<% else %>
 						<%= link_to "View Live", project.url, class: "viewLive button" %>
 					<% end %>
+
 				</div> <!-- /.portfolio-text -->
 			</div> <!-- /.portfolio-item -->
 			<% end %>
 		<% end %>
 		</div> <!-- /.work-items -->
 	</div> <!-- /.inner-wrapper -->
-</section> <!-- /.portfolio-container -->
+</section> <!-- /.portfolio-container
