@@ -11,18 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905215039) do
-
-  create_table "languages", force: :cascade do |t|
-    t.string   "lang_1"
-    t.string   "lang_2"
-    t.string   "lang_3"
-    t.string   "lang_4"
-    t.string   "lang_5"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "project_id"
-  end
+ActiveRecord::Schema.define(version: 20160906142607) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
