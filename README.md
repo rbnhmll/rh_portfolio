@@ -16,6 +16,4 @@ A personal portfolio site
 		* Dependency => Destroy
 		* Should allow any number of languages to be added, but start with 5 or 6
 		* Loop over in view
-	* Add CV
-
-	* 
+	* Add CV page
