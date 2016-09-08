@@ -17,21 +17,11 @@
 				</div> <!-- /.portfolio-image -->
 				<div class="portfolio-text">
 					<h4><%= project.title %></h4>
-
-					<% if project.lang_1 != "" %>
-						<div class="tech"><%= project.lang_1 %></div>
-					<% end %>
-					<% if project.lang_2 != "" %>
-						<div class="tech"><%= project.lang_2 %></div>
-					<% end %>
-					<% if project.lang_3 != "" %>
-						<div class="tech"><%= project.lang_3 %></div>
-					<% end %>
-					<% if project.lang_4 != "" %>
-						<div class="tech"><%= project.lang_4 %></div>
-					<% end %>
-					<% if project.lang_5 != "" %>
-						<div class="tech"><%= project.lang_5 %></div>
+					
+					<% project.languages.all.each do |lang| %>
+						<% unless lang.lang_name.nil? || lang.lang_name.empty? %>
+							<div class="tech"><%= lang.lang_name %></div>
+						<% end %>
 					<% end %>
 
 					<p><%= project.description.html_safe %></p>
@@ -47,8 +37,8 @@
 
 				</div> <!-- /.portfolio-text -->
 			</div> <!-- /.portfolio-item -->
-			<% end %>
-		<% end %>
+			<% end %> <!-- /project.active? -->
+		<% end %> <!-- /.each -->
 		</div> <!-- /.work-items -->
 	</div> <!-- /.inner-wrapper -->
 </section> <!-- /.portfolio-container

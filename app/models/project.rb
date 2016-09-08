@@ -5,8 +5,7 @@ class Project < ActiveRecord::Base
 
 	has_many :languages, :dependent => :destroy
 
-	accepts_nested_attributes_for :languages
-
-	# , :reject_if => lambda { |a| a[:lang_name].blank? }
+	accepts_nested_attributes_for :languages, :allow_destroy => true
+	#, :reject_if => lambda { |a| a[:lang_name].blank? }
 
 end
