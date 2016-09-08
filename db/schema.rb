@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908012653) do
+ActiveRecord::Schema.define(version: 20160908162035) do
 
   create_table "languages", force: :cascade do |t|
     t.string   "lang_name"
@@ -31,11 +31,6 @@ ActiveRecord::Schema.define(version: 20160908012653) do
     t.integer  "screenshot_file_size"
     t.datetime "screenshot_updated_at"
     t.boolean  "active"
-    t.string   "lang_1"
-    t.string   "lang_2"
-    t.string   "lang_3"
-    t.string   "lang_4"
-    t.string   "lang_5"
   end
 
   create_table "users", force: :cascade do |t|

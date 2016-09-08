@@ -12,12 +12,15 @@ before_action :authenticate_user!
 
 	def new
 		@project = Project.new
+		5.times do 
+			@project.languages.build
+		end
 	end
 
 	def create
 		@project = Project.create(project_params)
 		if @project.save
-			redirect_to root_path
+			redirect_to projects_path
 		else
 			render :new
 		end
@@ -54,7 +57,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :screenshot, :url, :active, :lang_1, :lang_2, :lang_3, :lang_4, :lang_5)
+    params.require(:project).permit(:title, :description, :screenshot, :url, :active, :lang_name, languages_attributes: [ :id, :lang_name, :project_id ])
   end
 
 end
