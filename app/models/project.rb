@@ -3,4 +3,6 @@ class Project < ActiveRecord::Base
 
 	validates_attachment_content_type :screenshot, :content_type => /\Aimage\/.*\Z/
 
+	has_many :languages, :dependent => :destroy
+
 end
