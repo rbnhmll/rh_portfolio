@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
 
 	def home
-		@projects = Project.all.order(created_at: :desc)
+		proj = Project.all.order(created_at: :desc)
+		@projects = proj.where(active: true)
 	end
 
 end
