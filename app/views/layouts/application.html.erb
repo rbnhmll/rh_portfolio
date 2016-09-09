@@ -21,7 +21,11 @@
 				<div class="nav-logo-container">
 					<div class="site-branding">
 						<h1 class="site-title">
-							<%= link_to "Robin Hamill", root_path(:anchor => "top") %>
+							<% if current_page?(root_path) %>
+								<%= link_to "Robin Hamill", "#top" %>
+							<% else %>
+								<%= link_to "Robin Hamill", root_path %>
+							<% end %>
 							<div class="mini-box mini-topleft animated fadeInLeftBig"></div>
 							<div class="mini-box mini-topright animated fadeInLeftBig"></div>
 							<div class="mini-box mini-bottomleft animated fadeInLeftBig"></div>
