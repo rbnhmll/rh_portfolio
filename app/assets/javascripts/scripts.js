@@ -47,7 +47,7 @@ var isMobile = {
     	});
     };
 
-	// $('header').stellar();
+	// $('.home-container').stellar();
 
 
 
