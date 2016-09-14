@@ -2,11 +2,11 @@
 	<div class="menu-menu-1-container">
 		<ul id="primary-menu" class="menu">
 			<!-- Back-end only links -->
-			<li class="menu-item"><%= link_to "Home", root_path %></li>
+			<li class="menu-item"><%= link_to "Homepage", root_path %></li>
+			<li class="menu-item"><%= link_to "*Project index", projects_path %></li>
+			<li class="menu-item"><%= link_to "*Add Project", new_project_path %></li>
 			
 			<% if user_signed_in? %>
-				<li class="menu-item"><%= link_to "*Project index", projects_path %></li>
-				<li class="menu-item"><%= link_to "*Add Project", new_project_path %></li>
 				<li class="menu-item button--sign_out"><%= link_to "Sign Out", "/users/sign_out", method: 'delete' %></li>
 			<% end %>
 
