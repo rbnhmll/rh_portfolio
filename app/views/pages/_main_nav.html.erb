@@ -3,10 +3,18 @@
 	<div class="menu-menu-1-container">
 		<ul id="primary-menu" class="menu">
 			<!-- Front-end only links -->
-			<li class="menu-item"><%= link_to "About", "#about" %></li>
-			<li class="menu-item"><%= link_to "Portfolio", "#portfolio" %></li>
-			<li class="menu-item"><%= link_to "Tools", "#tools" %></li>
-			<li class="menu-item"><%= link_to "Contact", "#contact" %></li>
+			<li class="menu-item">
+				<%= link_to "About", "#about" %>
+			</li>
+			<li class="menu-item">
+				<%= link_to "Portfolio", "#portfolio" %>
+			</li>
+			<li class="menu-item">
+				<%= link_to "Tools", "#tools" %>
+			</li>
+			<li class="menu-item">
+				<%= link_to "Contact", "#contact" %>
+			</li>
 		
 			<% if user_signed_in? %>
 				<li class="menu-item"><%= link_to "*Admin", projects_path %></li>
