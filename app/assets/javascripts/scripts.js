@@ -1,6 +1,6 @@
 // Smooth Scroll
 
-$('a').smoothScroll();
+// $('a').smoothScroll();
 
 $(function(){
   var hashCheck = function() {
