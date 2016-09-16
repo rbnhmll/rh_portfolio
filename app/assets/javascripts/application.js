@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 
-//= require plugins
+//= require stellar
 //= require smoothScroll
 //= require scripts
