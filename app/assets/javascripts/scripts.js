@@ -1,7 +1,3 @@
-// Smooth Scroll
-
-// $('a').smoothScroll();
-
 $(function(){
   var hashCheck = function() {
     $(".primary-menu a").removeClass("active");
