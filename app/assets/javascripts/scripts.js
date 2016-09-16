@@ -3,23 +3,19 @@
 $('a').smoothScroll();
 
 $(function(){
-  console.log("Ready");
-  
   var hashCheck = function() {
     $(".primary-menu a").removeClass("active");
-    
-    console.log("Hash Check"); 
     // this will get the full URL at the address bar
     var hash = window.location.hash; 
-
     // passes on every "a" tag 
     $(".primary-menu a").each(function() {
-        // checks if its the same on the address bar
-        console.log(this.hash);
-        if(hash == (this.hash)) { 
+      // checks if its the same on the address bar
+      if (hash != "") {
+        if (hash == (this.hash)) { 
           $(this).closest("a").addClass("active");
         }
-      });
+      }
+    });
   };
   
 
