@@ -15,4 +15,5 @@
 //= require turbolinks
 
 //= require plugins
+//= require smoothScroll
 //= require scripts

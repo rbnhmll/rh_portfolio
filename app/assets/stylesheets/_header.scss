@@ -129,7 +129,8 @@ h1 {
 			  transition: left .5s ease;
 			}
 			&:hover:after,
-			&:focus:after {
+			&:focus:after,
+			&.active:after {
 				left: 0;
 			}
 		}
