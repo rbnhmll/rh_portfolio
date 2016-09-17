@@ -8,7 +8,7 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 </head>
-<body class="home page page-template-default"  id="home top">
+<body id="top">
 
 	<div id="page" class="hfeed site">
 
@@ -25,7 +25,7 @@
 							<% if current_page?(root_path) %>
 								<%= link_to "Robin Hamill", "#top", "data-turbolinks" => false %>
 							<% else %>
-								<%= link_to "Robin Hamill", root_path %>
+								<%= link_to "Robin Hamill", root_path, "data-turbolinks" => false %>
 							<% end %>
 							
 							<div class="mini-box mini-topleft animated fadeInLeftBig"></div>
