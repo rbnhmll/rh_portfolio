@@ -9,6 +9,7 @@
 	<%= stylesheet_link_tag 'application', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css'%>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
+	<%= analytics_init if GoogleAnalytics.valid_tracker? %>
 </head>
 <body id="top">
 

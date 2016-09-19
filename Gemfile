@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'google-analytics-rails', '~> 1.1'
   gem 'spring'
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
