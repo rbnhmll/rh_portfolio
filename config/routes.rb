@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :projects
 
+  get '/pages/calc_js' => 'pages#calc_js'
+  
   root to: 'pages#home'
 
 end

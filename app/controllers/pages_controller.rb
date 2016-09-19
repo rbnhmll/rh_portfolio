@@ -5,4 +5,8 @@ class PagesController < ApplicationController
 		@projects = proj.where(active: true)
 	end
 
+	def calc_js
+		
+	end
+
 end

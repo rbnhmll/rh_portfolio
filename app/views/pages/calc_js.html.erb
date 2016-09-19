@@ -1,0 +1,412 @@
+<style>
+  article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Work Sans', sans-serif; }
+
+body {
+  background: url(../images/ricepaper2.png);
+  background-repeat: repeat; }
+
+.tool-bar {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 0px;
+  width: 100%;
+  padding: 5px; }
+  .tool-bar .time {
+    color: #fff;
+    margin: 0; }
+  .tool-bar .fa {
+    color: #fff; }
+
+.wrapper {
+  width: 374px;
+  display: inline-block;
+  font-weight: 200;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative; }
+
+.screen {
+  width: 100%;
+  color: #fff;
+  font-size: 4.1rem;
+  padding: 93px 15px;
+  background: #202020;
+  height: 186px;
+  text-align: right; }
+
+.buttons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+  border: 1px solid #000; }
+  .buttons .btn {
+    font-weight: 200;
+    font-size: 2.5rem;
+    width: 93px;
+    height: 93px;
+    padding-top: 10px;
+    border: 1px solid #959697;
+    text-align: center; }
+    .buttons .btn:hover {
+      box-shadow: inset 0 0 5px grey; }
+
+.special {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .special .btn {
+    background: #C5C6C9;
+    font-size: 2rem;
+    font-weight: 100; }
+
+.numbers {
+  width: 279px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .numbers .btn {
+    background: #D1D2D4; }
+  .numbers .btn0 {
+    width: 186px;
+    text-align: left;
+    padding-left: 40px; }
+
+.math {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .math .btn {
+    font-size: 3rem;
+    background: #F98711;
+    color: white; }
+
+.calculator {
+  transition: -webkit-transform 0.75s ease;
+  transition: transform 0.75s ease; }
+
+.rotate180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.deal-with-it {
+  display: none;
+  width: 500px;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: 150px;
+  z-index: 10; }
+
+.calc-font {
+  font-family: 'Keania One';
+  font-size: 3.5rem; }
+
+.display {
+  display: inline-block; }
+
+.deal-text {
+  margin: 0;
+  opacity: 0;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 800;
+  font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif";
+  letter-spacing: 6px;
+  transition: all 0.5s ease; }
+
+.text-display {
+  opacity: 1; }
+
+</style>
+
+<img src="images/deal-with-it.png" alt="deal with it glasses" class="deal-with-it">
+<div class="wrapper calculator">
+  <div class="tool-bar">
+    <i class="fa fa-wifi"></i>
+    <div class="time"></div>
+    <i class="fa fa-battery-three-quarters"></i>
+  </div> <!-- /.tool-bar -->
+  <div class="screen">0</div>
+  <div class="buttons">
+
+    <div class="mainBtns">
+      <div class="special">
+        <div class="clear">
+          <button class="btn btnC" value="C">C</button>
+        </div>
+        <button class="btn btnPM" value="+/-">+/-</button>
+        <button class="btn btnPer" value="%">%</button>
+      </div> <!--/.special-->
+
+      <div class="numbers">
+        <button class="btn btn7" value="7">7</button>
+        <button class="btn btn8" value="8">8</button>
+        <button class="btn btn9" value="9">9</button>
+        <button class="btn btn4" value="4">4</button>
+        <button class="btn btn5" value="5">5</button>
+        <button class="btn btn6" value="6">6</button>
+        <button class="btn btn1" value="1">1</button>
+        <button class="btn btn2" value="2">2</button>
+        <button class="btn btn3" value="3">3</button>
+        <button class="btn btn0" value="0">0</button>
+        <button class="btn btnDec" value=".">.</button>
+      </div> <!--/.numbers-->
+    </div> <!--/.mainBtns-->
+
+    <div class="math">
+      <button class="btn btnDiv" value="/">&divide;</button>
+      <button class="btn btnX" value="*">&times;</button>
+      <button class="btn btnMin" value="-">&minus;</button>
+      <button class="btn btnPlus" value="+">&plus;</button>
+      <div class="equals">
+        <button class="btn btnEq" value="=">=</button>
+      </div> <!-- /.equals -->
+    </div> <!--/.math-->
+
+  </div> <!--/.buttons-->
+</div> <!--/.wrapper-->
+<h2 class="deal-text">DEAL WITH IT</h2>
+
+<script>
+  var app = {};
+  var formulaString = "";
+  var answer = "";
+  var easterEggs = [0.7734, 8369417052, 8008, 9009, 58008, 59009, 58008618, 59009619, 5318008, 5319009, 55378008, 32008, 5317009, 7734, 37047734, 4517734, 316006, 376006];
+
+  // .ready() function, but simplified.
+  $(function(){
+    app.init();
+  }); //end of .ready()
+
+  // Will be run on ready, as told above.
+  app.init = function() {
+    console.log('Welcome Robin. Shall we do some math?');
+    app.startTime();
+    app.calculation();
+  };
+
+  // Clock function
+  app.startTime = function() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      m = checkTime(m);
+      $(".time").text(h+":"+m);
+      var t = setTimeout(function(){
+        app.startTime()
+      },500);
+      function checkTime(i) {
+        if (i<10) {
+          i = "0" + i
+        };  // add zero in front of numbers < 10
+        return i;
+      }
+  };
+
+  app.calculation = function() {
+    // Easteregg Function
+    app.dealWithIt = function() {
+      $(".calculator").addClass("rotate180");
+      $(".deal-with-it").addClass("display animated fadeInDownBig");
+      $(".screen").addClass("calc-font");
+      // Delay the text reveal for comic effect.
+      setTimeout(function() {
+        $("title").text("DEAL WITH IT!");
+        $(".deal-text").addClass("text-display");
+        console.log("wait for it!");
+      }, 1200);
+    };
+
+    // Reset function
+    $(".btnC").on("click", function() {
+      $(".screen").empty();
+      $(".screen").text("0");
+      $(".calculator").removeClass("rotate180");
+      $(".deal-with-it").removeClass("display animated fadeInDownBig");
+      $(".deal-text").removeClass("text-display");
+      $(".screen").removeClass("calc-font");
+      formulaString = "0";
+      $("title").text("JS Calc - BETA");
+      console.log("Calculator Cleared " + formulaString);
+    });
+    
+    // What to do when hitting the keys.
+    $(".numbers>.btn, .math>.btn").on("click", function() {
+      if ($(".screen").text() === "0") {
+        formulaString = "";
+      }
+      var number = $(this).attr("value");
+      formulaString += number;
+      formulaString = formulaString.substring(0,9);
+      $(".screen").text(formulaString);
+      console.log(formulaString);
+    });
+    
+    // Answer function, but also easter egg implementation.
+    $(".btnEq").on("click", function() {
+      answer = eval(formulaString);
+      console.log(answer);
+      $(".screen").empty();
+      $(".screen").text(answer);
+      formulaString = answer;
+      // Also Easter Egg
+      for (var i = 0; i < easterEggs.length; i++) {
+        if (answer == easterEggs[i]) {
+          app.dealWithIt();
+          console.log('beghilos!');
+        };
+      }; // End of for loop
+    }); // End of = functions
+
+  };
+</script>
