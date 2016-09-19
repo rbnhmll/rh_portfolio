@@ -1,3 +1,6 @@
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:300,200,100|Keania+One|Share+Tech+Mono' rel='stylesheet' type='text/css'>
+
+
 <style>
   article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -132,7 +135,7 @@ html {
   font-family: 'Work Sans', sans-serif; }
 
 body {
-  background: url(../images/ricepaper2.png);
+  background: url('assets/images/calc_js/ricepaper2.png');
   background-repeat: repeat; }
 
 .tool-bar {
@@ -233,7 +236,9 @@ body {
 
 .calculator {
   transition: -webkit-transform 0.75s ease;
-  transition: transform 0.75s ease; }
+  transition: transform 0.75s ease;
+  margin-top: 120px;
+}
 
 .rotate180 {
   -webkit-transform: rotate(180deg);
@@ -269,7 +274,12 @@ body {
 
 </style>
 
+
+
+
+
 <img src="images/deal-with-it.png" alt="deal with it glasses" class="deal-with-it">
+<%= image_tag 'calc_js/deal-with-it.png', :class => 'deal-with-it' %>
 <div class="wrapper calculator">
   <div class="tool-bar">
     <i class="fa fa-wifi"></i>
@@ -316,6 +326,10 @@ body {
   </div> <!--/.buttons-->
 </div> <!--/.wrapper-->
 <h2 class="deal-text">DEAL WITH IT</h2>
+
+
+
+
 
 <script>
   var app = {};
