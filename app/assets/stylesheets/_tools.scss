@@ -1,0 +1,101 @@
+// BLOG SAMPLES / FRONT PAGE
+
+.tools-container {
+	padding: 100px 0;
+	background: $white;
+	transform: skewY(-3deg);
+	.inner-wrapper {
+		transform: skewY(3deg);
+		p {
+			text-align: center;
+		}
+	}
+}
+
+// .blog-posts {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	.blog-post {
+// 		position: relative;
+// 		border: 3px solid $darkgrey;
+// 		width: 32%;
+// 		padding: 15px;
+// 		margin: 50px 0;
+// 		p {
+// 			margin-bottom: 75px;
+// 		}
+// 		.button {
+// 			position: absolute;
+// 			bottom: 15px;
+// 			left: calc(50% - 63.6875px);
+// 			display: inline-block;
+// 			justify-content: center;
+// 			margin: 0 auto;
+// 			text-align: center;
+// 		}
+// 	}
+// }
+
+.skill-icons {
+	display: flex;
+	flex-wrap: wrap;
+	.devicons {
+		text-align: center;
+		margin-top: 35px;
+		font-size: 10rem;
+		width: 33.33%;
+		@media all and (max-width: 574px) {
+			font-size: 8rem;
+		}
+		@media all and (max-width: 500px) {
+			font-size: 6rem;
+		}
+		@media all and (max-width: 400px) {
+			font-size: 4rem;
+		}
+	}
+}
+
+.devicons-html5 {
+	color: #D25A3B;
+}
+
+.devicons-css3 {
+	color: #2E76B3;
+}
+
+.devicons-sass {
+	color: #BE729B;
+}
+
+.devicons-javascript_badge {
+	color: #EFD65B;
+}
+
+.devicons-jquery {
+	color: #256CA8;
+}
+
+.devicons-wordpress {
+	color: #42A0CF;
+}
+
+.devicons-ruby {
+	color: #9E1408;
+}
+
+.devicons-ruby_on_rails {
+	color: #B32524;
+}
+
+.devicons-github_badge {
+	color: #122635;
+}
+
+.devicons-git {
+	color: #E15F40;
+}
+
+.devicons-gulp {
+	color: #D65B57;
+}
