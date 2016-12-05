@@ -21,10 +21,15 @@
 	}
 }
 
-.contact-left,
-.contac-right {
-	width: 50%;
+.contact-left {
+	width: 60%;
 	text-align: left;
+}
+.contact-right {
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .contact-left p {
@@ -72,11 +77,11 @@
 // 	}
 // }
 .email-btn {
-	width: 100%;
+	// width: 100%;
 	text-align: center;
 	bottom: 0;
 	display: inline;
-	text-transform: lowercase;
+	// text-transform: lowercase;
 	padding: 12px 30px;
 	color: $white;
 	border: 3px solid $white;
