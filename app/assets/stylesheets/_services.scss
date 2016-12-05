@@ -1,6 +1,6 @@
-// BLOG SAMPLES / FRONT PAGE
+// SERVICES
 
-.tools-container {
+.services-container {
 	padding: 100px 0;
 	background: $white;
 	transform: skewY(-3deg);
@@ -11,30 +11,6 @@
 		}
 	}
 }
-
-// .blog-posts {
-// 	display: flex;
-// 	justify-content: space-between;
-// 	.blog-post {
-// 		position: relative;
-// 		border: 3px solid $darkgrey;
-// 		width: 32%;
-// 		padding: 15px;
-// 		margin: 50px 0;
-// 		p {
-// 			margin-bottom: 75px;
-// 		}
-// 		.button {
-// 			position: absolute;
-// 			bottom: 15px;
-// 			left: calc(50% - 63.6875px);
-// 			display: inline-block;
-// 			justify-content: center;
-// 			margin: 0 auto;
-// 			text-align: center;
-// 		}
-// 	}
-// }
 
 .skill-icons {
 	display: flex;
