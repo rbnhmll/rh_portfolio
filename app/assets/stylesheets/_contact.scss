@@ -19,8 +19,28 @@
 			align-content: center;
 		}
 }
+.or-badge {
+	background-color: $white;
+	border-radius: 50%;
+	display: inline-block;
+	font-family: $fontHeader;
+	font-weight: 600;
+	line-height: 1;
+	padding: 7px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(50%, -50%);
+	@media all and (max-width: 800px) {
+		top: initial;
+		bottom: 0;
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+}
 
 .information {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -37,9 +57,12 @@
 		border-bottom: 3px solid $white;
 	}
 	h4 {
-		text-align: center;
+		text-align: left;
 		color: $white;
 		margin: 0;
+	}
+	p {
+		text-align: left;
 	}
 	.contact-box {
 		align-content: center;
