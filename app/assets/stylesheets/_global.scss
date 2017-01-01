@@ -55,7 +55,7 @@ a:visited {
 }
 
 .inner-wrapper {
-	max-width: 970px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 25px
 }
@@ -84,9 +84,15 @@ a:visited {
 	}
 	&.dark {
 		background: $darkgrey;
+		// background: $blue;
 	}
 }
 
 .fadeInBlock {
     opacity:0;
+}
+
+label {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
 }

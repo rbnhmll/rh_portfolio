@@ -11,8 +11,8 @@
  * file per style scope.
  *
  *= require_self
- *= require main
  */
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "main";

@@ -47,6 +47,9 @@
 
 .about-text {
 	width: 74%;
+	p {
+		font-size: 27px;
+	}
 	@media all and (max-width: 900px) {
 		width: 100%;
 	}
@@ -67,7 +70,7 @@
 	}
 }
 
-.cv {
+.cta--about .button {
 	display: inline-block;
-	margin: 0 auto;
+	text-align: center;
 }

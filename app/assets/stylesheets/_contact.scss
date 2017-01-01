@@ -28,7 +28,7 @@
 	line-height: 1;
 	padding: 7px;
 	position: absolute;
-	right: 0;
+	right: -1px;
 	top: 50%;
 	transform: translate(50%, -50%);
 	@media all and (max-width: 800px) {
@@ -48,6 +48,9 @@
 	padding: 20px 15px 0 0;
 	padding-right: 35px;
 	width: 35%;
+	p {
+		color: $lightgrey;
+	}
 	@media all and (max-width: 800px) {
 		width: 100%;
 		padding: 0;

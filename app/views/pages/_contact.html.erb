@@ -14,10 +14,13 @@
 			
 			<form action="http://www.focuspocus.io/magic/4ab445983988546fd138dfdee3062637" method="POST" class="contact-form">
 				<div class="name-email-container">
-					<input type="text" class="name-input" name="name" placeholder="Name" required>
-					<input type="email" class="email-input" name="email" placeholder="E-Mail" required>
+					<label for="name">Name</label>
+					<input id="name" type="text" class="name-input" name="name" placeholder="Name" required>
+					<label for="email">Email</label>
+					<input id="email" type="email" class="email-input" name="email" placeholder="E-Mail" required>
 				</div> <!-- /.name-email-container -->
-				<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" cols="30" rows="5" placeholder="Message"></textarea>
 				<div class="submit-container">
 					<input type="submit" value="Send Message" class="submit-button">
 				</div> <!-- /.submit-container -->
@@ -25,7 +28,7 @@
 		</div> <!-- /.info-form-container -->
 
 	</div> <!-- /.inner-wrapper -->
-	<%= link_to "#top", :class => "back-to-top", "data-turbolinks" => false, :target => "_blank" do %>
+	<%= link_to "#top", :class => "back-to-top", "data-turbolinks" => false, :target => "_blank", 'aria-label' => "Back to top" do %>
 		<i class="fa fa-angle-up"></i>
 	<% end %>
 </section> <!-- /.contact-container

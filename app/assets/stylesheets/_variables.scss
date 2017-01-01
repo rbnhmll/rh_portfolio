@@ -1,11 +1,12 @@
 // Colours
 $white: #FAFAFA;
 $lightgrey: #D9DADB;
-$darkgrey: darken($lightgrey, 25%);
+$darkgrey: darken($lightgrey, 35%);
 $black: #1D242B;
 $sand: #B8AC8D;
 $blue: #1C7293;
-$celeste: #B9E3C6;
+$accent: #95E4E8;
+$accentdark: darken($accent, 40%);
 
 // Fonts
 $fontMain: 'Raleway', sans-serif;
