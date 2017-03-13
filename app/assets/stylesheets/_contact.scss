@@ -21,6 +21,7 @@
 }
 .or-badge {
 	background-color: $white;
+	border: 10px solid $black;
 	border-radius: 50%;
 	display: inline-block;
 	font-family: $fontHeader;
@@ -28,7 +29,7 @@
 	line-height: 1;
 	padding: 7px;
 	position: absolute;
-	right: -1px;
+	right: -1.5px;
 	top: 50%;
 	transform: translate(50%, -50%);
 	@media all and (max-width: 800px) {
