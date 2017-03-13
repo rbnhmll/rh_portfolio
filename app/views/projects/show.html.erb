@@ -1,0 +1,41 @@
+<section class="home-container" data-stellar-background-ratio="1.5">
+</section> <!-- /.home-container -->
+<section class="portfolio-container" id="portfolio">
+	<div class="inner-wrapper">
+		<h3>Work</h3>
+		<div class="little-line light"></div>
+		<div class="work-items">
+
+		<% unless @projects.present? %>
+			<p>Looks like you don't have any projects, yet!</p>
+		<% end %>
+
+			<div class="portfolio-item">
+				<div class="portfolio-image">
+					<%= image_tag @project.screenshot %>
+				</div> <!-- /.portfolio-image -->
+				<div class="portfolio-text">
+					<h4><%= @project.title %></h4>
+					
+					<% @project.languages.all.each do |lang| %>
+						<% unless lang.lang_name.nil? || lang.lang_name.empty? %>
+							<div class="tech"><%= lang.lang_name %></div>
+						<% end %>
+					<% end %>
+
+					<p><%= @project.description.html_safe %></p>
+
+					<!-- Page Specific buttons -->
+					<% if current_page?(@projects_path) %>
+						<p>Active on homepage?: <strong><%= @project.active %></strong></p>
+					<%= link_to "Edit", edit_project_path(@project), class: "button submit-button" %>
+					<%= link_to "Delete", project_path(@project), class: "button submit-button", method: :delete, data: { confirm: "Are you sure?"} %>
+					<% else %>
+						<%= link_to "View Live", @project.url, class: "viewLive button" %>
+					<% end %>
+
+				</div> <!-- /.portfolio-text -->
+			</div> <!-- /.portfolio-item -->
+		</div> <!-- /.work-items -->
+	</div> <!-- /.inner-wrapper -->
+</section> <!-- /.portfolio-container
