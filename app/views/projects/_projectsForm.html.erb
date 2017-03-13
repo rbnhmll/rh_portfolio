@@ -8,11 +8,15 @@
 		<%= f.text_area :description %>
 	</div>
 	<div class="field">
+		<%= f.label :long_description %>:
+		<%= f.text_area :long_description %>
+	</div>
+	<div class="field">
 		<%= f.label :url %>:
 		<%= f.text_field :url %>
 	</div>
 	<div class="field">
-		<%= f.label :screenshot %>:
+		<%= f.label :screenshot, "Main screenshot" %>:
 		<small>(900 x 600 px is a good size)</small>
 		<%= f.file_field :screenshot %>
 	</div>

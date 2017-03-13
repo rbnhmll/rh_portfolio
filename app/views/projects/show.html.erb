@@ -2,20 +2,14 @@
 </section> <!-- /.home-container -->
 <section class="portfolio-container" id="portfolio">
 	<div class="inner-wrapper">
-		<h3>Work</h3>
+		<h3><%= @project.title %></h3>
 		<div class="little-line light"></div>
 		<div class="work-items">
-
-		<% unless @projects.present? %>
-			<p>Looks like you don't have any projects, yet!</p>
-		<% end %>
-
 			<div class="portfolio-item">
 				<div class="portfolio-image">
 					<%= image_tag @project.screenshot %>
 				</div> <!-- /.portfolio-image -->
 				<div class="portfolio-text">
-					<h4><%= @project.title %></h4>
 					
 					<% @project.languages.all.each do |lang| %>
 						<% unless lang.lang_name.nil? || lang.lang_name.empty? %>
@@ -24,6 +18,8 @@
 					<% end %>
 
 					<p><%= @project.description.html_safe %></p>
+					
+					<p><%= @project.long_description.html_safe %></p>
 
 					<!-- Page Specific buttons -->
 					<% if current_page?(@projects_path) %>

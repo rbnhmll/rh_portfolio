@@ -57,7 +57,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :screenshot, :url, :active, :lang_name, languages_attributes: [ :id, :lang_name, :project_id ])
+    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :lang_name, languages_attributes: [ :id, :lang_name, :project_id ])
   end
 
 end
