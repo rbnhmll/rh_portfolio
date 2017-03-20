@@ -32,6 +32,8 @@
 					<%= link_to "Delete", project_path(project), class: "button submit-button", method: :delete, data: { confirm: "Are you sure?"} %>
 					<% else %>
 						<%= link_to "View Live", project.url, class: "viewLive button" %>
+						<%= link_to "See More", project_path(project), class: "viewLive button" %>
+
 					<% end %>
 
 				</div> <!-- /.portfolio-text -->
