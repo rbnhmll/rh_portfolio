@@ -49,6 +49,9 @@
 	width: 74%;
 	p {
 		font-size: 27px;
+		a {
+			font-weight: 700;
+		}
 	}
 	@media all and (max-width: 900px) {
 		width: 100%;
