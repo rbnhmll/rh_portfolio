@@ -25,10 +25,10 @@
 		<%= f.check_box :active %>
 	</div>
 
-	<%= f.fields_for :languages do |builder| %>
+	<%= f.fields_for :tags do |builder| %>
 		<div class="field">
-			<%= builder.label :lang_name, "Language" %>
-			<%= builder.text_field :lang_name %>
+			<%= builder.label :tag_name, "Tag" %>
+			<%= builder.text_field :tag_name %>
 		</div>
 	<% end %>
 	

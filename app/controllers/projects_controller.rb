@@ -13,7 +13,7 @@ before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 	def new
 		@project = Project.new
 		5.times do 
-			@project.languages.build
+			@project.tags.build
 		end
 	end
 
@@ -57,7 +57,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :lang_name, languages_attributes: [ :id, :lang_name, :project_id ])
+    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :tag_name, tags_attributes: [ :id, :tag_name, :project_id ])
   end
 
 end

@@ -3,9 +3,9 @@ class Project < ActiveRecord::Base
 
 	validates_attachment_content_type :screenshot, :content_type => /\Aimage\/.*\Z/
 
-	has_many :languages, :dependent => :destroy
+	has_many :tags, :dependent => :destroy
 
-	accepts_nested_attributes_for :languages, :allow_destroy => true
-	#, :reject_if => lambda { |a| a[:lang_name].blank? }
+	accepts_nested_attributes_for :tags, :allow_destroy => true
+	#, :reject_if => lambda { |a| a[:tag_name].blank? }
 
 end
