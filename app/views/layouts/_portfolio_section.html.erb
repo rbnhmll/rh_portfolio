@@ -12,7 +12,7 @@
 		<% @projects.each do |project| %>
 			<div class="portfolio-item">
 				<div class="portfolio-image">
-					<%= image_tag project.screenshot %>
+					<a href="<%= project.url %>" target="_blank"><%= image_tag project.screenshot %></a>
 				</div> <!-- /.portfolio-image -->
 				<div class="portfolio-text">
 					<h4><%= project.title %></h4>
@@ -33,7 +33,6 @@
 					<% else %>
 						<%= link_to "View Live", project.url, class: "viewLive button" %>
 						<%= link_to "See More", project_path(project), class: "viewLive button" %>
-
 					<% end %>
 
 				</div> <!-- /.portfolio-text -->

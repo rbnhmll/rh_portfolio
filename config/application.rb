@@ -32,5 +32,15 @@ module RobinHamill
         bucket: "rhportfoio-images"
       }
     }
+
+    config.action_mailer.smtp_settings = {
+        address: "smtp.mailgun.org",
+        port: 587, # ports 587 and 2525 are also supported with STARTTLS
+        enable_starttls_auto: true, # detects and uses STARTTLS
+        user_name: ENV['SMTP_USERNAME'],
+        password: ENV['SMTP_PASSWORD'], # SMTP password is any valid API key
+        domain: ENV['MG_DOMAIN'],
+        authentication: 'login', # Mailgun supports 'plain' or 'login'
+      }
   end
 end
