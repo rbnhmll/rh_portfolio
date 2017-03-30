@@ -59,10 +59,19 @@
 	font-size: .8rem;
 }
 
-.portfolio-text .button.viewLive {
+.portfolio-text .projectButtons {
+	display: flex;
 	position: absolute;
-	bottom: 0;
 	left: 0;
+	bottom: 0;
+
+	@media all and (max-width: 900px) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.portfolio-text .button {
 	color: $white;
 	border: 3px solid $white;
 	text-decoration: none;
@@ -71,8 +80,8 @@
 		background: $white;
 		color: $black;
 	}
-	@media all and (max-width: 900px) {
-		left: 50%;
-		transform: translateX(-50%);
-	}
+}
+
+.portfolio-text .button + .button {
+	margin-left: 15px;
 }

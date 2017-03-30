@@ -31,8 +31,10 @@
 					<%= link_to "Edit", edit_project_path(project), class: "button submit-button" %>
 					<%= link_to "Delete", project_path(project), class: "button submit-button", method: :delete, data: { confirm: "Are you sure?"} %>
 					<% else %>
-						<%= link_to "View Live", project.url, class: "viewLive button" %>
-						<%= link_to "See More", project_path(project), class: "viewLive button" %>
+						<div class="projectButtons">
+							<%= link_to "View Live", project.url, class: "viewLive button" %>
+							<%= link_to "See More", project_path(project), class: "viewLive seeMore button" %>
+						</div>
 					<% end %>
 
 				</div> <!-- /.portfolio-text -->
