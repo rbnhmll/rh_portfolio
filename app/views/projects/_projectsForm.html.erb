@@ -1,4 +1,4 @@
-<%= form_for @project do |f| %>
+<%= form_for @project, :html => { :multipart => true } do |f| %>
 	<div class="field">
 		<%= f.label :title %>:
 		<%= f.text_field :title %>
@@ -20,6 +20,19 @@
 		<small>(900 x 600 px is a good size)</small>
 		<%= f.file_field :screenshot %>
 	</div>
+
+	<!-- Gallery images -->
+	<div class="gallery_input">
+		<%= f.fields_for :gallery_images do |builder| %>
+			<div class="field">
+				<%= builder.label :gallery_order %>
+				<%= builder.number_field :gallery_order, in: 1..4 %>
+				<%= builder.label :image, "Gallery image" %>
+				<%= builder.file_field :image %>
+			</div>
+		<% end %>
+	</div>
+
 	<div class="field">
 		<%= f.label :active, "Active?:" %>
 		<%= f.check_box :active %>

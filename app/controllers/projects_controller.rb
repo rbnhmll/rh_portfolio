@@ -12,8 +12,12 @@ before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 
 	def new
 		@project = Project.new
-		5.times do 
+		4.times do 
 			@project.tags.build
+		end
+
+		4.times do 
+			@project.gallery_images.build
 		end
 	end
 
@@ -57,7 +61,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :tag_name, tags_attributes: [ :id, :tag_name, :project_id ])
+    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :tag_name, tags_attributes: [ :id, :tag_name, :project_id ], gallery_images_attributes: [ :id, :gallery_order, :project_id, :image])
   end
 
 end
