@@ -23,10 +23,11 @@
 
 	<!-- Gallery images -->
 	<div class="gallery_input">
+		<h4>Gallery Detail images</h4>
 		<%= f.fields_for :gallery_images do |builder| %>
 			<div class="field">
 				<%= builder.label :gallery_order %>
-				<%= builder.number_field :gallery_order, in: 1..4 %>
+				<%= builder.number_field :gallery_order, in: 1..4, class: "gallery_order" %>
 				<%= builder.label :image, "Gallery image" %>
 				<%= builder.file_field :image %>
 			</div>

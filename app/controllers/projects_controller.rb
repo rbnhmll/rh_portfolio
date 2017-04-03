@@ -31,7 +31,11 @@ before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 	end
 
 	def edit
-		
+		if @project.gallery_images.count < 1
+			4.times do 
+				@project.gallery_images.build
+			end
+		end
 	end
 
 	def update
