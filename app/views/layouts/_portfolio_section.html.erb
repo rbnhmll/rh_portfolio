@@ -28,9 +28,9 @@
 					<!-- Page Specific buttons -->
 					<% if current_page?(projects_path) %>
 						<p>Active on homepage?: <strong><%= project.active %></strong></p>
-					<%= link_to "Edit", edit_project_path(project), class: "button submit-button" %>
-					<%= link_to "Show", project_path(project), class: "button submit-button" %>
-					<%= link_to "Delete", project_path(project), class: "button submit-button", method: :delete, data: { confirm: "Are you sure?"} %>
+					<%= link_to "Edit", edit_project_path(project), class: "button" %>
+					<%= link_to "Show", project_path(project), class: "button" %>
+					<%= link_to "Delete", project_path(project), class: "button", method: :delete, data: { confirm: "Are you sure?"} %>
 					<% else %>
 						<div class="projectButtons">
 							<%= link_to "View Live", project.url, class: "viewLive button" %>

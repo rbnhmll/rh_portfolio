@@ -1,6 +1,6 @@
 <!-- <section class="home-container" data-stellar-background-ratio="1.5">
 </section> --> <!-- /.home-container -->
-<section class="portfolio-container" id="portfolio">
+<section class="portfolio-container showView" id="portfolio">
 	<%= image_tag @project.screenshot.url, class: "portfolio-screenshot" %>
 	<div class="inner-wrapper">
 		<h3><%= @project.title %></h3>
@@ -23,16 +23,14 @@
 							<div class="tech"><%= tag.tag_name %></div>
 						<% end %>
 					<% end %>
-
-					<p><%= @project.description.html_safe %></p>
 					
 					<p><%= @project.long_description.html_safe %></p>
 
 					<!-- Page Specific buttons -->
 					<% if current_page?(@projects_path) %>
 						<p>Active on homepage?: <strong><%= @project.active %></strong></p>
-					<%= link_to "Edit", edit_project_path(@project), class: "button submit-button" %>
-					<%= link_to "Delete", project_path(@project), class: "button submit-button", method: :delete, data: { confirm: "Are you sure?"} %>
+					<%= link_to "Edit", edit_project_path(@project), class: "button" %>
+					<%= link_to "Delete", project_path(@project), class: "button", method: :delete, data: { confirm: "Are you sure?"} %>
 					<% else %>
 						<%= link_to "View Live", @project.url, class: "viewLive button" %>
 					<% end %>
