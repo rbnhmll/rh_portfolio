@@ -41,15 +41,18 @@
 	</div> <!-- /.inner-wrapper -->
 </section> <!-- /.portfolio-container -->
 
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script>
-	$(function() {
-		console.log("hey guys");
+	function ready() {
+		console.log("ready");
 		$('.portfolio-gallery').flickity({
 		  cellAlign: 'left',
 		  contain: true,
 		  wrapAround: true
 		});
-	});
-</script>
+	};
+
+	$(document).ready(ready);
+	$(document).on('page:change', ready);
+</script> -->
