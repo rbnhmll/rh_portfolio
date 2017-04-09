@@ -7,7 +7,7 @@ before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 	end
 
 	def show
-		
+		@gallery_images = @project.gallery_images.all
 	end
 
 	def new

@@ -1,15 +1,21 @@
 <!-- <section class="home-container" data-stellar-background-ratio="1.5">
 </section> --> <!-- /.home-container -->
 <section class="portfolio-container" id="portfolio">
-	<%= image_tag @project.screenshot %>
+	<%= image_tag @project.screenshot.url, class: "portfolio-screenshot" %>
 	<div class="inner-wrapper">
 		<h3><%= @project.title %></h3>
 		<div class="little-line light"></div>
 		<div class="work-items">
 			<div class="portfolio-item">
-				<div class="portfolio-image">
-					<%= image_tag @project.screenshot %>
-				</div> <!-- /.portfolio-image -->
+				
+				<div class="portfolio-gallery">
+					<% @gallery_images.each do |g_image| %>
+						<div class="gallery-image">
+							<%= image_tag g_image.image.url %>
+						</div>
+					<% end %>
+				</div> <!-- /.portfolioGallery -->
+				
 				<div class="portfolio-text">
 					
 					<% @project.tags.all.each do |tag| %>
@@ -35,4 +41,17 @@
 			</div> <!-- /.portfolio-item -->
 		</div> <!-- /.work-items -->
 	</div> <!-- /.inner-wrapper -->
-</section> <!-- /.portfolio-container
+</section> <!-- /.portfolio-container -->
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<script>
+	$(function() {
+		console.log("hey guys");
+		$('.portfolio-gallery').flickity({
+		  cellAlign: 'left',
+		  contain: true,
+		  wrapAround: true
+		});
+	});
+</script>

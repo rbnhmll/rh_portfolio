@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
 	has_many :gallery_images, :dependent => :destroy
 
 	accepts_nested_attributes_for :tags, :allow_destroy => true
-
+	
 	accepts_nested_attributes_for :gallery_images, :allow_destroy => true
 	#, :reject_if => lambda { |a| a[:tag_name].blank? }
 
