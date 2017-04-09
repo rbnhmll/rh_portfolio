@@ -42,7 +42,10 @@
 		$(function() {
 			// catch spam and deny submit
 			$("#contact-form").submit(function(e){
+				var nameVal = $('#name').val();
 				if($("#denySubmit").val() !== ""){
+					return false;
+				} else if (/\d/.test(nameVal)) {
 					return false;
 				};
 			});
