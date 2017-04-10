@@ -26,7 +26,7 @@
 			width: 100%;
 		}
 		img {
-			max-width: 100%;
+			width: 100%;
 			display: block;
 		}
 	}
@@ -112,6 +112,7 @@
 	.portfolio__long_description {
 		p {
 			margin: 27px 0;
+			color: $lightgrey;
 		}
 		width: 50%;
 		@media screen and (max-width: 600px) {

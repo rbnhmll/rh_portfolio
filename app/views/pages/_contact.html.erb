@@ -28,7 +28,7 @@
 				</div>
 				
 				<div class="submit-container">
-					<input type="submit" value="Send Message" class="submit-button">
+					<input type="submit" value="Send Message" class="submit-button" disabled >
 				</div> <!-- /.submit-container -->
 			</form> <!-- /.contact-form -->
 		</div> <!-- /.info-form-container -->
@@ -40,6 +40,9 @@
 
 	<script>
 		$(function() {
+			setTimeout(function(){
+				$('input[type="submit"]').prop('disabled', false);
+			}, 2000);
 			$("#contact-form").submit(function(e){
 				var nameVal = $('#name').val();
 				if($("#denySubmit").val() !== ""){

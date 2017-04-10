@@ -29,8 +29,8 @@
 			<div class="field">
 				<%= builder.label :gallery_order %>
 				<%= builder.number_field :gallery_order, in: 1..4, class: "gallery_order" %>
-				<%= builder.label :image, "Gallery image" %>
-				<%= builder.file_field :image %>
+				<%= builder.label :image, "Image" %>
+				<%= builder.file_field :image, value: :image %>
 				<%= builder.label :background_color, "Colour", value: :background_color %>
 				<%= builder.color_field :background_color %>
 			</div>
