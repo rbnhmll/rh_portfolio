@@ -23,11 +23,11 @@
 	</div> <!-- /.inner-wrapper -->
 	<div class="portfolio__gallery">
 		<% @gallery_images.each do |g_image| %>
-			<div class="gallery-image">
-				<% unless g_image.image.url == "/images/original/missing.png" %>
+			<% unless g_image.image.url == "/images/original/missing.png" %>
+				<div class="gallery-image">
 					<%= image_tag g_image.image.url(:large) %>
-				<% end %>
-			</div>
+				</div>
+			<% end %>
 		<% end %>
 	</div> <!-- /.portfolioGallery -->
 	<div class="inner-wrapper">
