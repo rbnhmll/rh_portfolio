@@ -105,8 +105,14 @@
 	padding: 5px;
 }
 
-.flickity-page-dots {
-	.dot {
-		background: $white;
+.portfolio__gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.gallery-image {
+		width: 50%;
+		img {
+			max-width: 100%;
+		}
 	}
 }
