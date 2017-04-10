@@ -65,7 +65,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :tag_name, tags_attributes: [ :id, :tag_name, :project_id ], gallery_images_attributes: [ :id, :gallery_order, :project_id, :image])
+    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :tag_name, tags_attributes: [ :id, :tag_name, :project_id ], gallery_images_attributes: [ :id, :gallery_order, :project_id, :image, :background_color])
   end
 
 end
