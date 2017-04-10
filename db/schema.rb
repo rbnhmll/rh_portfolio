@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908162035) do
+ActiveRecord::Schema.define(version: 20170402153405) do
 
-  create_table "languages", force: :cascade do |t|
-    t.string   "lang_name"
+  create_table "gallery_images", force: :cascade do |t|
     t.integer  "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "gallery_order"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -31,6 +35,14 @@ ActiveRecord::Schema.define(version: 20160908162035) do
     t.integer  "screenshot_file_size"
     t.datetime "screenshot_updated_at"
     t.boolean  "active"
+    t.text     "long_description"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "tag_name"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

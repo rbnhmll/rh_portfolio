@@ -1,4 +1,4 @@
-<%= form_for @project do |f| %>
+<%= form_for @project, :html => { :multipart => true } do |f| %>
 	<div class="field">
 		<%= f.label :title %>:
 		<%= f.text_field :title %>
@@ -8,23 +8,42 @@
 		<%= f.text_area :description %>
 	</div>
 	<div class="field">
+		<%= f.label :long_description %>:
+		<%= f.text_area :long_description %>
+	</div>
+	<div class="field">
 		<%= f.label :url %>:
 		<%= f.text_field :url %>
 	</div>
 	<div class="field">
-		<%= f.label :screenshot %>:
-		<small>(900 x 600 px is a good size)</small>
+		<%= f.label :screenshot, "Main screenshot" %>:
+		<small>(1200 x 800 px is a good size)</small>
 		<%= f.file_field :screenshot %>
 	</div>
+
+	<!-- Gallery images -->
+	<div class="gallery_input">
+		<h4>Gallery Detail images</h4>
+		<small>(900 x 600 px is a good size)</small>
+		<%= f.fields_for :gallery_images do |builder| %>
+			<div class="field">
+				<%= builder.label :gallery_order %>
+				<%= builder.number_field :gallery_order, in: 1..4, class: "gallery_order" %>
+				<%= builder.label :image, "Gallery image" %>
+				<%= builder.file_field :image %>
+			</div>
+		<% end %>
+	</div>
+
 	<div class="field">
 		<%= f.label :active, "Active?:" %>
 		<%= f.check_box :active %>
 	</div>
 
-	<%= f.fields_for :languages do |builder| %>
+	<%= f.fields_for :tags do |builder| %>
 		<div class="field">
-			<%= builder.label :lang_name, "Language" %>
-			<%= builder.text_field :lang_name %>
+			<%= builder.label :tag_name, "Tag" %>
+			<%= builder.text_field :tag_name %>
 		</div>
 	<% end %>
 	

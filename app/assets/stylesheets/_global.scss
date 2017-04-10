@@ -19,6 +19,12 @@ h4 {
 	text-transform: uppercase;
 }
 
+h1 a,
+h1 a:hover,
+h1 a:visited {
+	color: $white;
+}
+
 h3,
 .h3 {
 	text-align: center;
@@ -42,11 +48,11 @@ a {
 	font-weight: 500;
 }
 
-a,
-a:hover,
-a:visited {
-	color: $darkgrey;
-}
+// a,
+// a:hover,
+// a:visited {
+// 	color: $darkgrey;
+// }
 
 .outer-wrapper {
 	max-width: 1170px;

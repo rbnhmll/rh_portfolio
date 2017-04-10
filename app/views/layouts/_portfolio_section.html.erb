@@ -12,14 +12,14 @@
 		<% @projects.each do |project| %>
 			<div class="portfolio-item">
 				<div class="portfolio-image">
-					<a href="<%= project.url %>" target="_blank"><%= image_tag project.screenshot %></a>
+					<a href="<%= project.url %>" target="_blank"><%= image_tag project.screenshot.url(:large) %></a>
 				</div> <!-- /.portfolio-image -->
 				<div class="portfolio-text">
 					<h4><%= project.title %></h4>
 					
-					<% project.languages.all.each do |lang| %>
-						<% unless lang.lang_name.nil? || lang.lang_name.empty? %>
-							<div class="tech"><%= lang.lang_name %></div>
+					<% project.tags.all.each do |tag| %>
+						<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
+							<div class="tech"><%= tag.tag_name %></div>
 						<% end %>
 					<% end %>
 
@@ -28,10 +28,14 @@
 					<!-- Page Specific buttons -->
 					<% if current_page?(projects_path) %>
 						<p>Active on homepage?: <strong><%= project.active %></strong></p>
-					<%= link_to "Edit", edit_project_path(project), class: "button submit-button" %>
-					<%= link_to "Delete", project_path(project), class: "button submit-button", method: :delete, data: { confirm: "Are you sure?"} %>
+					<%= link_to "Edit", edit_project_path(project), class: "button" %>
+					<%= link_to "Show", project_path(project), class: "button" %>
+					<%= link_to "Delete", project_path(project), class: "button", method: :delete, data: { confirm: "Are you sure?"} %>
 					<% else %>
-						<%= link_to "View Live", project.url, class: "viewLive button", target: "_blank" %>
+						<div class="projectButtons">
+							<%= link_to "View Live", project.url, class: "viewLive button" %>
+							<!-- <%= link_to "See More", project_path(project), class: "viewLive seeMore button" %> -->
+						</div>
 					<% end %>
 
 				</div> <!-- /.portfolio-text -->
@@ -39,4 +43,10 @@
 		<% end %> <!-- /.each -->
 		</div> <!-- /.work-items -->
 	</div> <!-- /.inner-wrapper -->
-</section> <!-- /.portfolio-container
+</section> <!-- /.portfolio-container -->
+
+<!-- <section class="portfolio__cta">
+	<div class="inner-wrapper">
+		
+	</div>
+</section> -->

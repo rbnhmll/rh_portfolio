@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tag_name: MyString
   project_id: 1
+  gallery_order: 1
 
 two:
-  tag_name: MyString
   project_id: 1
+  gallery_order: 1

@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-before_action :set_project, only: [:edit, :update, :show, :destroy]
+before_action :set_project, only: [:show, :edit, :update, :destroy]
 before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 
 	def index
@@ -7,13 +7,17 @@ before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 	end
 
 	def show
-		
+		@gallery_images = @project.gallery_images.all
 	end
 
 	def new
 		@project = Project.new
-		5.times do 
-			@project.languages.build
+		4.times do 
+			@project.tags.build
+		end
+
+		4.times do 
+			@project.gallery_images.build
 		end
 	end
 
@@ -27,7 +31,11 @@ before_action :authenticate_user!, only: [:edit, :update, :destroy, :new]
 	end
 
 	def edit
-		
+		if @project.gallery_images.count < 1
+			4.times do 
+				@project.gallery_images.build
+			end
+		end
 	end
 
 	def update
@@ -57,7 +65,7 @@ private
   end
   
   def project_params
-    params.require(:project).permit(:title, :description, :screenshot, :url, :active, :lang_name, languages_attributes: [ :id, :lang_name, :project_id ])
+    params.require(:project).permit(:title, :description, :long_description, :screenshot, :url, :active, :tag_name, tags_attributes: [ :id, :tag_name, :project_id ], gallery_images_attributes: [ :id, :gallery_order, :project_id, :image])
   end
 
 end
