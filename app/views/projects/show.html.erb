@@ -24,7 +24,7 @@
 	<div class="portfolio__gallery">
 		<% @gallery_images.each do |g_image| %>
 			<% unless g_image.image.url == "/images/original/missing.png" %>
-				<div class="gallery-image">
+				<div class="gallery-image" style="background-color:<%= g_image.background_color %>">
 					<%= image_tag g_image.image.url(:large) %>
 				</div>
 			<% end %>
