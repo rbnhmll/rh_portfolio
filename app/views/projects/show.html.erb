@@ -1,5 +1,5 @@
 <section class="portfolio-container showView" id="portfolio">
-	<%= image_tag @project.screenshot, class: "portfolio-screenshot" %>
+	<%= image_tag @project.screenshot.url(:banner), class: "portfolio-screenshot" %>
 	<div class="inner-wrapper">
 		<div class="portfolio__description">
 			<div class="portfolio__meta">
