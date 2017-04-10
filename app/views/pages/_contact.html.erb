@@ -20,7 +20,7 @@
 					<input id="email" type="email" class="email-input" name="email" placeholder="E-Mail" required>
 				</div> <!-- /.name-email-container -->
 				<label for="message">Message</label>
-				<textarea id="message" name="message" cols="30" rows="5" placeholder="Message"></textarea>
+				<textarea id="message" name="message" cols="30" rows="5" placeholder="Message" required></textarea>
 				
 				<div style="display:none">
 					<label for="denySubmit">Please leave this field empty:</label>
@@ -40,7 +40,6 @@
 
 	<script>
 		$(function() {
-			// catch spam and deny submit
 			$("#contact-form").submit(function(e){
 				var nameVal = $('#name').val();
 				if($("#denySubmit").val() !== ""){
