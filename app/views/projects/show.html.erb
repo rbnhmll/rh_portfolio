@@ -5,39 +5,34 @@
 	<div class="inner-wrapper">
 		<h3><%= @project.title %></h3>
 		<div class="little-line light"></div>
-		<div class="work-items">
-			<div class="portfolio-item">
+		<div class="portfolio--detailed">
+			<div class="portfolio__description">
 				
-				<div class="portfolio-gallery">
-					<% @gallery_images.each do |g_image| %>
-						<div class="gallery-image">
-							<%= image_tag g_image.image.url %>
-						</div>
+				<% @project.tags.all.each do |tag| %>
+					<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
+						<div class="tech"><%= tag.tag_name %></div>
 					<% end %>
-				</div> <!-- /.portfolioGallery -->
+				<% end %>
 				
-				<div class="portfolio-text">
-					
-					<% @project.tags.all.each do |tag| %>
-						<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
-							<div class="tech"><%= tag.tag_name %></div>
-						<% end %>
-					<% end %>
-					
-					<p><%= @project.long_description.html_safe %></p>
+				<p><%= @project.long_description.html_safe %></p>
+			</div> <!-- /.portfolio-text -->
 
-					<!-- Page Specific buttons -->
-					<% if current_page?(@projects_path) %>
-						<p>Active on homepage?: <strong><%= @project.active %></strong></p>
-					<%= link_to "Edit", edit_project_path(@project), class: "button" %>
-					<%= link_to "Delete", project_path(@project), class: "button", method: :delete, data: { confirm: "Are you sure?"} %>
-					<% else %>
-						<%= link_to "View Live", @project.url, class: "viewLive button" %>
-					<% end %>
+			<div class="portfolio__gallery">
+				<% @gallery_images.each do |g_image| %>
+					<div class="gallery-image">
+						<%= image_tag g_image.image.url(:medium) %>
+					</div>
+				<% end %>
+			</div> <!-- /.portfolioGallery -->
 
-				</div> <!-- /.portfolio-text -->
-			</div> <!-- /.portfolio-item -->
-		</div> <!-- /.work-items -->
+			<% if current_user %>
+				<p>Active on homepage?: <strong><%= @project.active %></strong></p>
+				<%= link_to "Edit", edit_project_path(@project), class: "button" %>
+				<%= link_to "Delete", project_path(@project), class: "button", method: :delete, data: { confirm: "Are you sure?"} %>
+			<% end %>
+
+			<%= link_to "View Live", @project.url, class: "viewLive button" %>
+		</div> <!-- /.portfolio-item -->
 	</div> <!-- /.inner-wrapper -->
 </section> <!-- /.portfolio-container -->
 
