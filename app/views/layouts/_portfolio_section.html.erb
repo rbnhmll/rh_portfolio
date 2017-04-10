@@ -12,7 +12,7 @@
 		<% @projects.each do |project| %>
 			<div class="portfolio-item">
 				<div class="portfolio-image">
-					<a href="<%= project.url %>" target="_blank"><%= image_tag project.screenshot %></a>
+					<a href="<%= project.url %>" target="_blank"><%= image_tag project.screenshot.url(:large) %></a>
 				</div> <!-- /.portfolio-image -->
 				<div class="portfolio-text">
 					<h4><%= project.title %></h4>
@@ -34,7 +34,7 @@
 					<% else %>
 						<div class="projectButtons">
 							<%= link_to "View Live", project.url, class: "viewLive button" %>
-							<%= link_to "See More", project_path(project), class: "viewLive seeMore button" %>
+							<!-- <%= link_to "See More", project_path(project), class: "viewLive seeMore button" %> -->
 						</div>
 					<% end %>
 
@@ -43,4 +43,10 @@
 		<% end %> <!-- /.each -->
 		</div> <!-- /.work-items -->
 	</div> <!-- /.inner-wrapper -->
-</section> <!-- /.portfolio-container
+</section> <!-- /.portfolio-container -->
+
+<!-- <section class="portfolio__cta">
+	<div class="inner-wrapper">
+		
+	</div>
+</section> -->

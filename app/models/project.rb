@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-	has_attached_file :screenshot, styles: { large: "950x600#", medium: "500x350#", small: "300x200#", thumb: "175x150#" }
+	has_attached_file :screenshot, styles: { banner: "1450x725#", large: "950x600#", medium: "500x350#", small: "300x200#", thumb: "175x150#" }
 
 	validates_attachment_content_type :screenshot, :content_type => /\Aimage\/.*\Z/
 

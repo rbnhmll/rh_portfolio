@@ -1,19 +1,24 @@
 <section class="portfolio-container showView" id="portfolio">
-	<%= image_tag @project.screenshot.url, class: "portfolio-screenshot" %>
+	<%= image_tag @project.screenshot.url(:banner), class: "portfolio-screenshot" %>
 	<div class="inner-wrapper">
-		<h3><%= @project.title %></h3>
-		<div class="little-line light"></div>
 		<div class="portfolio__description">
+			<div class="portfolio__meta">
+				<h3><%= @project.title %></h3>
+				<div class="little-line light"></div>
+				<div class="portfolio__tags">
+					<% @project.tags.all.each do |tag| %>
+						<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
+							<div class="tech"><%= tag.tag_name %></div>
+						<% end %>
+					<% end %>
+				</div>
+			</div> <!-- /.portfolio__meta -->
 			
-			<% @project.tags.all.each do |tag| %>
-				<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
-					<div class="tech"><%= tag.tag_name %></div>
-				<% end %>
-			<% end %>
-			
-			<p><%= @project.long_description.html_safe %></p>
+			<div class="portfolio__long_description">
+				<p><%= @project.long_description.html_safe %></p>
+				<%= link_to "View Live", @project.url, class: "viewLive button" %>
+			</div>
 
-			<%= link_to "View Live", @project.url, class: "viewLive button" %>
 		</div> <!-- /.portfolio__description -->
 	</div> <!-- /.inner-wrapper -->
 	<div class="portfolio__gallery">
