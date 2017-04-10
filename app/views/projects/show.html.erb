@@ -1,53 +1,33 @@
-<!-- <section class="home-container" data-stellar-background-ratio="1.5">
-</section> --> <!-- /.home-container -->
 <section class="portfolio-container showView" id="portfolio">
 	<%= image_tag @project.screenshot.url, class: "portfolio-screenshot" %>
 	<div class="inner-wrapper">
 		<h3><%= @project.title %></h3>
 		<div class="little-line light"></div>
-		<div class="portfolio--detailed">
-			<div class="portfolio__description">
-				
-				<% @project.tags.all.each do |tag| %>
-					<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
-						<div class="tech"><%= tag.tag_name %></div>
-					<% end %>
+		<div class="portfolio__description">
+			
+			<% @project.tags.all.each do |tag| %>
+				<% unless tag.tag_name.nil? || tag.tag_name.empty? %>
+					<div class="tech"><%= tag.tag_name %></div>
 				<% end %>
-				
-				<p><%= @project.long_description.html_safe %></p>
-			</div> <!-- /.portfolio-text -->
+			<% end %>
+			
+			<p><%= @project.long_description.html_safe %></p>
 
-			<div class="portfolio__gallery">
-				<% @gallery_images.each do |g_image| %>
-					<div class="gallery-image">
-						<%= image_tag g_image.image.url(:medium) %>
-					</div>
-				<% end %>
-			</div> <!-- /.portfolioGallery -->
-
+			<%= link_to "View Live", @project.url, class: "viewLive button" %>
+		</div> <!-- /.portfolio__description -->
+	</div> <!-- /.inner-wrapper -->
+	<div class="portfolio__gallery">
+		<% @gallery_images.each do |g_image| %>
+			<div class="gallery-image">
+				<%= image_tag g_image.image.url(:large) %>
+			</div>
+		<% end %>
+	</div> <!-- /.portfolioGallery -->
+	<div class="inner-wrapper">
 			<% if current_user %>
 				<p>Active on homepage?: <strong><%= @project.active %></strong></p>
 				<%= link_to "Edit", edit_project_path(@project), class: "button" %>
 				<%= link_to "Delete", project_path(@project), class: "button", method: :delete, data: { confirm: "Are you sure?"} %>
 			<% end %>
-
-			<%= link_to "View Live", @project.url, class: "viewLive button" %>
-		</div> <!-- /.portfolio-item -->
 	</div> <!-- /.inner-wrapper -->
-</section> <!-- /.portfolio-container -->
-
-<!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-<script>
-	function ready() {
-		console.log("ready");
-		$('.portfolio-gallery').flickity({
-		  cellAlign: 'left',
-		  contain: true,
-		  wrapAround: true
-		});
-	};
-
-	$(document).ready(ready);
-	$(document).on('page:change', ready);
-</script> -->
+</section> <!-- /.portfolio-container
