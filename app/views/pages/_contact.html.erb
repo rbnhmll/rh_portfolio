@@ -12,25 +12,8 @@
 				<div class="or-badge">or</div>
 			</div> <!-- /.information -->
 			
-			<form action="http://www.focuspocus.io/magic/6af510cf7e9dc2a8f24ec67326f8769e" method="POST" class="contact-form" id="contact-form">
-				<div class="name-email-container">
-					<label for="name">Name</label>
-					<input id="name" type="text" class="name-input" name="name" placeholder="Name" required>
-					<label for="email">Email</label>
-					<input id="email" type="email" class="email-input" name="email" placeholder="E-Mail" required>
-				</div> <!-- /.name-email-container -->
-				<label for="message">Message</label>
-				<textarea id="message" name="message" cols="30" rows="5" placeholder="Message" required></textarea>
-				
-				<div style="display:none">
-					<label for="denySubmit">Please leave this field empty:</label>
-					<input type="text" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts.">
-				</div>
-				
-				<div class="submit-container">
-					<input type="submit" value="Send Message" class="submit-button" disabled >
-				</div> <!-- /.submit-container -->
-			</form> <!-- /.contact-form -->
+			<%= render 'pages/emailForm' %>
+
 		</div> <!-- /.info-form-container -->
 
 	</div> <!-- /.inner-wrapper -->
@@ -38,19 +21,4 @@
 		<i class="fa fa-angle-up"></i>
 	<% end %>
 
-	<script>
-		$(function() {
-			setTimeout(function(){
-				$('input[type="submit"]').prop('disabled', false);
-			}, 2000);
-			$("#contact-form").submit(function(e){
-				var nameVal = $('#name').val();
-				if($("#denySubmit").val() !== ""){
-					return false;
-				} else if (/\d/.test(nameVal)) {
-					return false;
-				};
-			});
-		}());
-	</script>
 </section> <!-- /.contact-container

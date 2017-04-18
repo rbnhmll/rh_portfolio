@@ -1,0 +1,39 @@
+<%= form_for '/pages/home', :html => {:class => 'contact-form', 'id' => 'contact-form'} do |f| %>
+	<div class="name-email-container">
+		<%= f.label :name %>
+		<%= f.text_field :name, id: 'name', class: "name-input", placeholder: 'Name' %>
+		<%= f.label :email %>
+		<%= f.email_field :email, id: "name", class: "email-input", placeholder: 'Email' %>
+	</div>
+	
+	<%= f.label :message %>
+	<%= f.text_area :message, class: "name-input", cols: "30", rows: "5", required: true, placeholder: 'Message' %>
+
+	<div style="display:none">
+		<%= f.label :denySubmit %>
+		<%= f.text_field :denySubmit, id: 'denySubmit', class: "name-input", placeholder: 'Name', value: "" %>
+
+		<input type="text" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts.">
+	</div>
+	
+
+	<div class="submit-container">
+		<%= f.submit 'Send', class: "submit-button", value: "Send Message", disabled: true %>
+	</div> <!-- /.submit-container -->
+<% end %>
+
+<script>
+	$(function() {
+		setTimeout(function(){
+			$('input[type="submit"]').prop('disabled', false);
+		}, 2000);
+		$("#contact-form").submit(function(e){
+			var nameVal = $('#name').val();
+			if($("#denySubmit").val() !== ""){
+				return false;
+			} else if (/\d/.test(nameVal)) {
+				return false;
+			};
+		});
+	}());
+</script>

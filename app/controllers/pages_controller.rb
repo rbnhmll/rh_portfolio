@@ -3,10 +3,7 @@ class PagesController < ApplicationController
 	def home
 		proj = Project.all.order(created_at: :desc)
 		@projects = proj.where(active: true)
-	end
-
-	def calc_js
-		
+		@email = ContactMailer.contact_email(@name, @email, @message)
 	end
 
 end
