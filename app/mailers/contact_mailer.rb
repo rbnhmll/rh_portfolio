@@ -5,7 +5,6 @@ class ContactMailer < ApplicationMailer
     @name = name
     @email = email
     @message = message
-
-    mail(from: name, subject: 'New Contact Request from robinhamill.ca')
+    mail(from: @email, subject: 'New Contact Request from robinhamill.ca')
   end
 end

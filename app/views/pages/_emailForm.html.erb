@@ -1,4 +1,4 @@
-<%= form_for '/pages/home', :html => {:class => 'contact-form', 'id' => 'contact-form'} do |f| %>
+<%= form_for :email_content, :url => email_path, :html => {:class => 'contact-form', 'id' => 'contact-form'} do |f| %>
 	<div class="name-email-container">
 		<%= f.label :name %>
 		<%= f.text_field :name, id: 'name', class: "name-input", placeholder: 'Name' %>
@@ -12,8 +12,6 @@
 	<div style="display:none">
 		<%= f.label :denySubmit %>
 		<%= f.text_field :denySubmit, id: 'denySubmit', class: "name-input", placeholder: 'Name', value: "" %>
-
-		<input type="text" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts.">
 	</div>
 	
 
