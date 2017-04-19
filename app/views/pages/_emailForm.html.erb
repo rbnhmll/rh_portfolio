@@ -5,6 +5,9 @@
 		<%= f.label :email %>
 		<%= f.email_field :email, id: "name", class: "email-input", placeholder: 'Email' %>
 	</div>
+
+	<%= f.label :subject %>
+	<%= f.text_field :subject, id: 'subject', class: "subject-input", placeholder: 'Subject' %>
 	
 	<%= f.label :message %>
 	<%= f.text_area :message, class: "name-input", cols: "30", rows: "5", required: true, placeholder: 'Message' %>
