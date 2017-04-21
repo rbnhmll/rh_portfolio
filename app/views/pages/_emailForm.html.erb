@@ -1,15 +1,15 @@
 <%= form_for :email_content, :url => email_path, :html => {:class => 'contact-form', 'id' => 'contact-form'} do |f| %>
 	<div class="name-email-container">
-		<%= f.label :name %>
+		<%= f.label :name, 'Name (required)' %>
 		<%= f.text_field :name, id: 'name', class: "name-input", placeholder: 'Name', required: true %>
-		<%= f.label :email %>
-		<%= f.email_field :email, id: "name", class: "email-input", placeholder: 'Email' %>
+		<%= f.label :email, 'Email (required)' %>
+		<%= f.email_field :email, id: "name", class: "email-input", placeholder: 'Email', required: true %>
 	</div>
 
 	<%= f.label :subject %>
 	<%= f.text_field :subject, id: 'subject', class: "subject-input", placeholder: 'Subject' %>
 	
-	<%= f.label :message %>
+	<%= f.label :message, 'Message (required)' %>
 	<%= f.text_area :message, class: "name-input", cols: "30", rows: "5", required: true, placeholder: 'Message' %>
 
 	<div style="display:none">
