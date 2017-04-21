@@ -78,7 +78,8 @@
 	text-align: center;
 	border-color: $black;
 	color: $black;
-	&:hover {
+	&:hover,
+	&:active {
 		background: $black;
 		color: $white;
 	}
