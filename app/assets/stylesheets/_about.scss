@@ -76,4 +76,10 @@
 .cta--about .button {
 	display: inline-block;
 	text-align: center;
+	border-color: $black;
+	color: $black;
+	&:hover {
+		background: $black;
+		color: $white;
+	}
 }
