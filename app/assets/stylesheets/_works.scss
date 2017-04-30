@@ -13,6 +13,18 @@
 	height: calc(90vh - 100px);
   object-fit: cover;
   object-position: top;
+  @media all and (max-width: 900px) {
+		height: 60vh;
+	}
+	@media all and (max-width: 750px) {
+		height: 50vh;
+	}
+  @media all and (max-width: 600px) {
+		height: 40vh;
+	}
+	@media all and (max-width: 500px) {
+		height: 30vh;
+	}
 }
 
 .portfolio-item {
