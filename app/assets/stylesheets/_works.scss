@@ -10,6 +10,9 @@
 
 .portfolio-screenshot {
 	width: 100%;
+	height: calc(90vh - 100px);
+  object-fit: cover;
+  object-position: top;
 }
 
 .portfolio-item {
