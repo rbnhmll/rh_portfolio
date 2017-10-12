@@ -25,7 +25,7 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Define default URL options
-  config.action_mailer.default_url_options = { host: 'http://www.robinhamill.ca' }
+  config.action_mailer.default_url_options = { host: 'http://www.robinhamill.com' }
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
