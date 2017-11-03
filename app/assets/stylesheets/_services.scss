@@ -88,3 +88,18 @@
 		margin-left: 15px;
 	}
 }
+
+.tech-icons {
+	max-width: 500px;
+	margin: 5% auto 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	&__image {
+		flex-basis: 15%;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+}
