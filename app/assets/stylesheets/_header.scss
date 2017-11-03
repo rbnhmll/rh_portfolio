@@ -1,136 +1,136 @@
 .site-header {
-	position: fixed;
-	top: 0;
-	z-index: 10;
-	width: 100%;
-	background: rgba($black, 0.5);
-	transition: all 0.5s ease;
-	&:hover {
-		background: rgba($black, 0.9);
-	}
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: rgba($black, 0.5);
+  transition: all 0.5s ease;
+  &:hover {
+    background: rgba($black, 0.9);
+  }
 }
 
 .nav-logo-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 15px 0;
-	@media all and (max-width: 610px) {
-		margin: 5px 0;
-	}
-	@media all and (max-width: 574px) {
-		flex-direction: column;
-		justify-content: center;
-	}
-	.main-navigation {
-		text-transform: uppercase;
-		display: flex;
-		align-items: center;
-		@media all and (max-width: 700px) {
-			font-size: .8rem;
-		}
-		@media all and (max-width: 574px) {
-			justify-content: space-around;
-	}
-	}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0;
+  @media all and (max-width: 610px) {
+    margin: 5px 0;
+  }
+  @media all and (max-width: 574px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-navigation {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    @media all and (max-width: 700px) {
+      font-size: 0.8rem;
+    }
+    @media all and (max-width: 574px) {
+      justify-content: space-around;
+    }
+  }
 }
 
 .button--sign_out {
-	background: RGBA(208, 40, 50, 0.5)
+  background: RGBA(208, 40, 50, 0.5);
 }
 
 .site-branding {
-	display: inline-flex;
-	flex-direction: column;
-	align-items: center;
-	margin-right: 10px;
-	@media all and (max-width: 575px) {
-		margin-right: 0;
-	}
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  @media all and (max-width: 575px) {
+    margin-right: 0;
+  }
 }
 
 h1 {
-	font-size: 1rem;
-	font-weight: 300;
-	color: $white;
-	position: relative;
-	margin: 0;
-	@media all and (max-width: 700px) {
-		font-size: .8rem;
-	}
-	a {
-		display: inline-block;
-		padding: 10px 15px;
-		color: $white;
-		text-decoration: none;
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-	}
-	.mini-box {
-		position: absolute;
-		width: 10px;
-		height: 10px;
-	}
-	.mini-topleft {
-		border-top: 3px solid $white;
-		border-left: 3px solid $white;
-		top: 0;
-		left: 0;
-	}
-	.mini-topright {
-		border-top: 3px solid $white;
-		border-right: 3px solid $white;
-		top: 0;
-		right: 0;
-	}
-	.mini-bottomleft {
-		border-bottom: 3px solid $white;
-		border-left: 3px solid $white;
-		bottom: 0;
-		left: 0;
-	}
-	.mini-bottomright {
-		border-bottom: 3px solid $white;
-		border-right: 3px solid $white;
-		bottom: 0;
-		right: 0;
-	}
+  font-size: 1rem;
+  font-weight: 300;
+  color: $white;
+  position: relative;
+  margin: 0;
+  @media all and (max-width: 700px) {
+    font-size: 0.8rem;
+  }
+  a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .mini-box {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+  }
+  .mini-topleft {
+    border-top: 3px solid $white;
+    border-left: 3px solid $white;
+    top: 0;
+    left: 0;
+  }
+  .mini-topright {
+    border-top: 3px solid $white;
+    border-right: 3px solid $white;
+    top: 0;
+    right: 0;
+  }
+  .mini-bottomleft {
+    border-bottom: 3px solid $white;
+    border-left: 3px solid $white;
+    bottom: 0;
+    left: 0;
+  }
+  .mini-bottomright {
+    border-bottom: 3px solid $white;
+    border-right: 3px solid $white;
+    bottom: 0;
+    right: 0;
+  }
 }
 
 .menu {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	list-style: none;
-	padding: 0;
-	.menu-item {
-		a {
-			position: relative;
-			display: inline-block;
-			padding: 10px 5px;
-			margin: 0 5px;
-			text-decoration: none;
-			color: $white;
-			overflow: hidden;
-			@media all and (max-width: 410px) {
-				margin: 0;
-				font-size: 0.7rem;
-			}
-			&:after {
-				position: absolute;
-			  bottom: 0;
-			  left: -100%;
-			  content: "";
-			  width: 100%;
-			  height: 3px;
-			  background: $white;
-			  transition: left .5s ease;
-			}
-			&:hover:after,
-			&:focus:after,
-			&.active:after {
-				left: 0;
-			}
-		}
-	}
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  .menu-item {
+    a {
+      position: relative;
+      display: block;
+      padding: 10px 5px;
+      margin: 0 5px;
+      text-decoration: none;
+      color: $white;
+      overflow: hidden;
+      @media all and (max-width: 410px) {
+        margin: 0;
+        font-size: 0.7rem;
+      }
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: $white;
+        transition: left 0.5s ease;
+      }
+      &:hover:after,
+      &:focus:after,
+      &.active:after {
+        left: 0;
+      }
+    }
+  }
 }
