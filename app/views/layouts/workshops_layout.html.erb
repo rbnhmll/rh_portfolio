@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robin Hamill // Workshops</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<%= render 'layouts/seo' %>
+	
+	<%= favicon_link_tag 'favicon.png' %>
+	
+	<%= stylesheet_link_tag 'workshops', media: 'all' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<%= analytics_init if GoogleAnalytics.valid_tracker? %>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1 class="site-title">Workshops</h1>
+    </div>
+  </header>
+  <main class="markdown-body wrapper">
+    <%= yield %>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <div class="site-info">
+        <p>&copy; <%=link_to "Robin Hamill", root_path %><span class="sep"> | </span>All rights reserved <%= Time.now.year %></p>
+      </div>
+      <div class="social">
+        <a href="https://twitter.com/rbnhmll" target="_blank" class="social__button" title="Twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/rbnhmll" target="_blank" class="social__button" title="Github"><i class="fa fa-github"></i></a>
+        <a href="https://codepen.io/rbnhmll/" target="_blank" class="social__button" title="Codepen"><i class="fa fa-codepen"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
