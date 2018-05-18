@@ -23,6 +23,24 @@
 | **Vue 2.4.2** | **58.8K** | **20.9K** |
 | Preact 7.2.0 | 16K | 4K |
 
+```language-javascript
+  var hashCheck = function() {
+    $(".primary-menu a").removeClass("active");
+    // this will get the full URL at the address bar
+    var hash = window.location.hash; 
+    // passes on every "a" tag 
+    $(".primary-menu a").each(function() {
+      // checks if its the same on the address bar
+      if (hash != "") {
+        if (hash == (this.hash)) { 
+          $(this).closest("a").addClass("active");
+        }
+      }
+    });
+  };
+```
+
+
 \* Source: https://gist.github.com/Restuta/cda69e50a853aa64912d
 
 * Features
