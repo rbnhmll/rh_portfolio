@@ -1,14 +1,17 @@
-[Workshop Repo](https://github.com/rbnhmll/vue-workshop)
+## Getting started with Vue.js, for people who hear React is cool
+Download starter files in the [workshop repo](https://github.com/rbnhmll/vue-workshop)
 
-# Getting started with Vue.js, for people who hear React is cool
+### Welcome to Intro to Vue.js
 
-## What is Vue?
+Vue.js is a progressive javascript framework for building web applications, or extending the functionality of an existing site to enrich the interactive experience. In today's workshop we will go through the steps of building and refactoring a web application which searches github repositories. We will start by using the Vue CDN for a quick and easy set-up, before moving to the official CLI tools provided by Vue to help make our application more modular, maintainable and scalable.
+
+### What is Vue?
 
 * Javascript framework from building front-end UI
 * In the same category as React, Preact, Angular and Ember
 * Create more maintainable codebase
 
-## Why Vue?
+### Why Vue?
 
 - Easy to learn
 - It's just JS
@@ -32,7 +35,7 @@
   * Reusable components, with it's own template, scripts and styles
   * All the best parts of React and Angular, without the bloat.
 
-## Get started with just the CDN
+### Get started with just the CDN
 
 * Grab the CDN or download the .js file
 * Setting up new Vue Instance
@@ -48,7 +51,7 @@
 * Directive modifiers
   * `v-on:submit.prevent="onSubmit"`
 
-## Using vue-cli (like create-react-app)
+### Using vue-cli (like create-react-app)
 
 * Install vue-cli (https://github.com/vuejs/vue-cli), `$ npm install -g vue-cli`
 * Create project
@@ -63,14 +66,16 @@
 * Props
 * computed properties
 * Lifecycle Hooks?
-* Notes and Gotchas: [
+* Notes and Gotchas:
   * In components, must use `data` as a function which returns an object, or it will not work
-    ]
 
-## Run with it!
+### Resources
+
+* [Vue.js docs](https://vuejs.org/v2/guide/)
+* [Good Workshops](http://goodworkshops.club/)
 
 Vue has a bunch of additional tools which parallel other popular frameworks
 
-* Vuex (like Redux)
-* Vue-router (like React-router)
-* Nuxt.js (SSR)
+* [Vuex](https://vuex.vuejs.org/en/) (like Redux)
+* [Vue-router](https://router.vuejs.org/en/) (like React-router)
+* [Nuxt.js](https://nuxtjs.org/) (SSR, like Next.js)
